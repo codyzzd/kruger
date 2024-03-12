@@ -44,10 +44,11 @@ export default function Home() {
           </div>
           <div id="photo" className="px-8">
             <Image
-              src="/images/homemtriste.jpeg"
+              src="/images/homemtriste.png"
               width={500}
               height={500}
               alt="Homem com a mão na cara triste de camisa comprida azul escuro"
+             quality={50}
             />
           </div>
         </div>
