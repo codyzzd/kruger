@@ -82,7 +82,7 @@ export default function Home() {
       <section className="text-white bg-blue-900">
         <div className="container mx-auto p-8 space-y-8 ">
           <h1 className="mb-3 text-2xl font-bold text-center">
-            Veja os casos que podemos lhe ajudar
+            Veja os casos que podemos lhe ajudar2
           </h1>
           <div id="listas">
             <div id="bom">
