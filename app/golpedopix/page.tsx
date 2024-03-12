@@ -8,7 +8,7 @@ export default function Home() {
       <section
         className="text-white"
         style={{
-          backgroundImage: 'url("/images/fundohero.png")',
+          backgroundImage: 'url("/images/fundohero.jpeg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div id="photo" className="px-8">
             <Image
-              src="/images/homemtriste.png"
+              src="/images/homemtriste.jpeg"
               width={500}
               height={500}
               alt="Homem com a mão na cara triste de camisa comprida azul escuro"
