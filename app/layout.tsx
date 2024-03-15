@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+//const inter = Inter({ subsets: ["latin"] });
 const sourceserif = Source_Serif_4({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
