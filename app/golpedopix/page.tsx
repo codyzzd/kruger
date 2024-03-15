@@ -12,7 +12,7 @@ export default function Home() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
-        <div className="container flex flex-col pt-8 mx-auto space-y-8 md:flex md:flex-row md:pt-0 ">
+        <div className="container grid grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1   mx-auto  lg:h-[80vh]  ">
           <div className="flex flex-col justify-center px-8 conteudo md:py-16">
             <Image
               className="mb-16"
@@ -45,7 +45,16 @@ export default function Home() {
               </p>
             </Link>
           </div>
-          <div id="photo" className="items-end px-8 md:w-full md:flex ">
+
+          <div
+            className="h-[50vh]  md:self-end md:w-full md:h-full"
+            style={{
+              backgroundImage: 'url("/images/homemtriste.png")',
+              backgroundSize: "contain",
+              backgroundPosition: "bottom center",
+              backgroundRepeat: "no-repeat",
+            }}></div>
+          {/* <div id="photo" className="items-end px-8 md:w-full md:flex ">
             <Image
               src="/images/homemtriste.png"
               width={715}
@@ -54,7 +63,7 @@ export default function Home() {
               quality={50}
               className=" md:h-[600px] md:min-w-fit"
             />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -91,8 +100,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* etapas mobile */}
       <section className="text-white bg-[#022442] ">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto md:py-16">
@@ -101,9 +108,9 @@ export default function Home() {
           </h2>
           <h2 className="mb-6 text-base">Quais serão as etapas?</h2>
 
-{/* etapas desktop para frente */}
+          {/* etapas desktop para frente */}
 
-{/* etapas até tablet */}
+          {/* etapas até tablet */}
           <div className="md:mx-32 xl:hidden">
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22">
@@ -220,13 +227,13 @@ export default function Home() {
 
       {/* bulletlist */}
       <section className="text-white bg-[#0A2136]">
-        <div className="container p-8 mx-auto space-y-8 md:py-16">
+        <div className="container p-8 mx-auto space-y-8 md:py-16 ">
           <h2 className="mb-3 text-2xl font-bold text-center md:text-4xl">
             Veja os casos que podemos lhe ajudar:
           </h2>
           <div
             id="listas"
-            className="space-y-8 md:flex md:flex-row  md:[&>div]:w-1/2 md:space-y-0 md:space-x-8">
+            className="space-y-8 md:flex md:flex-row  md:[&>div]:w-1/2 md:space-y-0 md:space-x-8 md:px-24 lg:px-48 ">
             <div id="bom">
               <div className="flex flex-row items-center mb-4 space-x-4">
                 <Image
@@ -293,7 +300,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 [&>div]:text-center [&>div]:space-y-4">
+            <div className="grid grid-cols-2 grid-rows-2  lg:grid-cols-4 lg:grid-rows-1 [&>div]:text-center [&>div]:space-y-4 lg:divide-x divide-orange-500 gap-8 lg:gap-0 [&>div]:lg:p-4">
               <div className="flex flex-col items-center ">
                 <Image
                   src="/images/hammer.webp"
@@ -363,7 +370,7 @@ export default function Home() {
             O que dizem da Advocacia Krüger Toledo?
           </h2>
 
- {/* grid de 1 para 2 colunas */}
+          {/* grid de 1 para 2 colunas */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:hidden">
             <ul className="space-y-4 [&>li]:bg-[#142157]">
               <li>
@@ -475,7 +482,7 @@ export default function Home() {
             </ul>
           </div>
 
- {/* grid para 4 colunas */}
+          {/* grid para 4 colunas */}
           <div className="hidden xl:block">
             <ul className="[&>li]:bg-[#142157] grid grid-cols-4 gap-4 [&>li]:h-fit">
               <li>
