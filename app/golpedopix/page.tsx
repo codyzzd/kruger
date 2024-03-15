@@ -100,7 +100,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* etapas mobile */}
+      {/* etapas */}
       <section className="text-white bg-[#022442] ">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto md:py-16">
           <h2 className="mb-2 text-2xl font-bold text-center md:text-4xl">
@@ -109,15 +109,97 @@ export default function Home() {
           <h3 className="mb-6 text-base">Quais serão as etapas?</h3>
 
           {/* etapas desktop para frente */}
+          <div className="hidden lg:block">
+            <div className="grid grid-rows-1 grid-cols-[22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr] [&>div]:self-end">
+              <div className="col-span-2 col-start-3">
+                <h4 className="mb-2 text-xl font-bold">
+                  2. Fazer um Boletim de ocorrência
+                </h4>
+                <p className="">
+                  Faça um BO online, você deve adicionar o máximo de informações
+                  sobre o crime ocorrido, como a sua conta bancária, o valor
+                  enviado, a conta que recebeu o valor.
+                </p>
+              </div>
+
+              <div className="col-span-2 col-start-7">
+                <h4 className="mb-2 text-xl font-bold">4. Petição Inicial</h4>
+                <p className="">
+                  Essa petição dá início ao processo judicial, nela apresentamos
+                  todos os fatos ocorridos ao juiz juntamente com nossos
+                  pedidos.
+                </p>
+              </div>
+
+              <div className="col-span-2 col-start-11">
+                <h4 className="mb-2 text-xl font-bold">6. Sentença</h4>
+                <p className="">
+                  A sentença é onde o juiz vai decidir o que irá acontecer,
+                  existem casos em que além da devolução dos valores perdidos
+                  para os golpistas o banco é condenado a pagar danos morais
+                  pelo transtorno causado.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-rows-1 grid-cols-[22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr] items-center my-4">
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
+              <div className="w-full border-t-2 border-orange-600"></div>{" "}
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
+              <div className="w-full border-t-2 border-orange-600"></div>{" "}
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
+              <div className="w-full border-t-2 border-orange-600"></div>{" "}
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
+              <div className="w-full border-t-2 border-orange-600"></div>{" "}
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
+              <div className="w-full border-t-2 border-orange-600"></div>{" "}
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
+              <div className="w-full border-t-2 border-orange-600"></div>{" "}
+              
+            </div>
+
+            <div className="grid grid-rows-1 grid-cols-[22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr] ">
+              <div className="col-span-2 col-start-1">
+                <h4 className="mb-2 text-xl font-bold">
+                  1. Entrar em contato com o seu banco
+                </h4>
+                <p className="">
+                  Você deve entrar em contato com o seu banco e solicitar o MED
+                  (Mecanismo especial de devolução), aconselhamos fazer por meio
+                  do próprio aplicativo.
+                </p>
+              </div>
+
+              <div className="col-span-2 col-start-5">
+                <h4 className="mb-2 text-xl font-bold">
+                  3. Coleta de provas da fraude
+                </h4>
+                <p className="">
+                  Nesse momento iremos produzir provas que comprovem o seu
+                  direito, como prints da fraude, comprovantes das
+                  transferências, protocolos do banco etc.
+                </p>
+              </div>
+
+              <div className="col-span-2 col-start-9">
+                <h4 className="mb-2 text-xl font-bold">
+                  5. Audiência de Instrução
+                </h4>
+                <p className="">
+                  Nessa etapa iremos questionar o banco sobre pontos
+                  importantíssimos para o curso do processo, produzindo provas
+                  em nosso favor.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* etapas até tablet */}
-          <div className="md:mx-32 xl:hidden">
+          <div className="md:mx-32 lg:hidden">
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22">
                 <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                {/* Círculo de 24 pixels */}
                 <div className="h-full border-l-2 border-orange-600"></div>{" "}
-                {/* Linha laranja */}
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">
@@ -134,9 +216,7 @@ export default function Home() {
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22 ">
                 <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                {/* Círculo de 24 pixels */}
                 <div className="h-full border-l-2 border-orange-600"></div>{" "}
-                {/* Linha laranja */}
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">
@@ -153,9 +233,7 @@ export default function Home() {
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22">
                 <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                {/* Círculo de 24 pixels */}
                 <div className="h-full border-l-2 border-orange-600"></div>{" "}
-                {/* Linha laranja */}
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">
@@ -172,9 +250,7 @@ export default function Home() {
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22">
                 <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                {/* Círculo de 24 pixels */}
                 <div className="h-full border-l-2 border-orange-600"></div>{" "}
-                {/* Linha laranja */}
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">4. Petição Inicial</h4>
@@ -189,9 +265,7 @@ export default function Home() {
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22">
                 <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                {/* Círculo de 24 pixels */}
                 <div className="h-full border-l-2 border-orange-600"></div>{" "}
-                {/* Linha laranja */}
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">
@@ -208,8 +282,6 @@ export default function Home() {
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-start w-22">
                 <div className="w-[20px] h-[20px] rounded-full bg-orange-600"></div>{" "}
-                {/* Círculo de 24 pixels */}
-                {/* Linha laranja */}
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">6. Sentença</h4>
