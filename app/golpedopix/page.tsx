@@ -8,7 +8,7 @@ export default function Home() {
       <section
         className="text-white md:overflow-hidden"
         style={{
-          backgroundImage: 'url("/images/fundohero.jpeg")',
+          backgroundImage: 'url("/images/fundohero.avif")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
