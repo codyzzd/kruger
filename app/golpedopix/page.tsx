@@ -17,8 +17,8 @@ export default function Home() {
             <Image
               className="mb-16"
               src="/images/logokruger.png"
-              //width={150}
-              //height={40}
+              width={150}
+              height={40}
               alt="Logo Kruger Advocacia"
             />
             <h1 className="mb-3 text-4xl font-bold md:text-5xl">
@@ -34,8 +34,8 @@ export default function Home() {
               className="flex flex-row space-x-4">
               <Image
                 src="/images/whatsapp.png"
-                //width={40}
-                //height={40}
+                width={40}
+                height={40}
                 alt="Whatsapp Icon"
                 className=" max-h-[40px] max-w-[40px]"
               />
@@ -49,7 +49,7 @@ export default function Home() {
           <div
             className="h-96 w-full self-end md:h-full"
             style={{
-              backgroundImage: 'url("/images/homemtriste.webp")',
+              backgroundImage: 'url("/images/homemtriste.avif")',
               backgroundSize: "contain",
               backgroundPosition: "bottom center",
               backgroundRepeat: "no-repeat",
@@ -87,8 +87,8 @@ export default function Home() {
             className="flex flex-row space-x-4 ">
             <Image
               src="/images/whatsapp.png"
-              //width={40}
-              //height={40}
+              width={40}
+              height={40}
               alt="Whatsapp Icon"
               className=" max-h-[40px] max-w-[40px]"
             />
@@ -238,8 +238,8 @@ export default function Home() {
               <div className="flex flex-row items-center mb-4 space-x-4">
                 <Image
                   src="/images/ok.png"
-                  //width={40}
-                  //height={40}
+                  width={40}
+                  height={40}
                   alt="OK Verde"
                 />
                 <h3 className="text-xl font-bold ">Para quem serve:</h3>
@@ -259,8 +259,8 @@ export default function Home() {
               <div className="flex flex-row items-center mb-4 space-x-4">
                 <Image
                   src="/images/close.png"
-                  //width={40}
-                  //height={40}
+                  width={40}
+                  height={40}
                   alt="Cruz Vermelha"
                 />
                 <h3 className="text-xl font-bold">Para quem serve:</h3>
@@ -304,8 +304,8 @@ export default function Home() {
               <div className="flex flex-col items-center ">
                 <Image
                   src="/images/hammer.webp"
-                  //width={200}
-                  //height={200}
+                  width={200}
+                  height={200}
                   alt="Icone de Martelo"
                   className="w-3/5 md:w-2/5"
                 />
@@ -314,8 +314,8 @@ export default function Home() {
               <div className="flex flex-col items-center ">
                 <Image
                   src="/images/fone.webp"
-                  //width={200}
-                  //height={200}
+                  width={200}
+                  height={200}
                   alt="Icone de Headset"
                   className="w-3/5 md:w-2/5"
                 />
@@ -324,8 +324,8 @@ export default function Home() {
               <div className="flex flex-col items-center ">
                 <Image
                   src="/images/certok.webp"
-                  //width={200}
-                  //height={200}
+                  width={200}
+                  height={200}
                   alt="Icone de OK"
                   className="w-3/5 md:w-2/5"
                 />
@@ -348,8 +348,8 @@ export default function Home() {
                 className="flex flex-row space-x-4">
                 <Image
                   src="/images/whatsapp.png"
-                  //width={40}
-                  //height={40}
+                  width={40}
+                  height={40}
                   alt="Icone de Usuário"
                   className=" max-h-[40px] max-w-[40px]"
                 />
@@ -377,8 +377,8 @@ export default function Home() {
                 <div className="p-4">
                   <Image
                     src="/images/googlelogo.webp"
-                    //width={40}
-                    //height={40}
+                    width={40}
+                    height={40}
                     alt="Icone do logo da Google"
                     className="mb-3"
                   />
@@ -403,8 +403,8 @@ export default function Home() {
                 <div className="p-4">
                   <Image
                     src="/images/googlelogo.webp"
-                    //width={40}
-                    //height={40}
+                    width={40}
+                    height={40}
                     alt="Icone do logo da Google"
                     className="mb-3"
                   />
@@ -432,8 +432,8 @@ export default function Home() {
                 <div className="p-4">
                   <Image
                     src="/images/googlelogo.webp"
-                    //width={40}
-                    //height={40}
+                    width={40}
+                    height={40}
                     alt="Icone do logo da Google"
                     className="mb-3"
                   />
@@ -456,8 +456,8 @@ export default function Home() {
                 <div className="p-4">
                   <Image
                     src="/images/googlelogo.webp"
-                    //width={40}
-                    //height={40}
+                    width={40}
+                    height={40}
                     alt="Icone do logo da Google"
                     className="mb-3"
                   />
@@ -489,8 +489,8 @@ export default function Home() {
                 <div className="p-4">
                   <Image
                     src="/images/googlelogo.webp"
-                    //width={40}
-                    //height={40}
+                    width={40}
+                    height={40}
                     alt="Icone do logo da Google"
                     className="mb-3"
                   />
@@ -515,8 +515,8 @@ export default function Home() {
                 <div className="p-4">
                   <Image
                     src="/images/googlelogo.webp"
-                    //width={40}
-                    //height={40}
+                    width={40}
+                    height={40}
                     alt="Icone do logo da Google"
                     className="mb-3"
                   />
@@ -542,8 +542,8 @@ export default function Home() {
                 <div className="p-4">
                   <Image
                     src="/images/googlelogo.webp"
-                    //width={40}
-                    //height={40}
+                    width={40}
+                    height={40}
                     alt="Icone do logo da Google"
                     className="mb-3"
                   />
@@ -566,8 +566,8 @@ export default function Home() {
                 <div className="p-4">
                   <Image
                     src="/images/googlelogo.webp"
-                    //width={40}
-                    //height={40}
+                    width={40}
+                    height={40}
                     alt="Icone do logo da Google"
                     className="mb-3"
                   />
@@ -690,8 +690,8 @@ export default function Home() {
             className="flex flex-row space-x-4 ">
             <Image
               src="/images/whatsapp.png"
-              //width={40}
-              //height={40}
+              width={40}
+              height={40}
               alt="Icone de Usuário"
               className=" max-h-[40px] max-w-[40px]"
             />
