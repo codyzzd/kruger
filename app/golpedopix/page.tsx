@@ -280,7 +280,7 @@ export default function Home() {
           <div
             className="min-w-full md:w-1/2 md:min-w-fit min-h-64"
             style={{
-              backgroundImage: 'url("/images/ceo.jpeg")',
+              backgroundImage: 'url("/images/ceo.avif")',
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}></div>
