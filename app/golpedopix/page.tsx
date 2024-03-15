@@ -47,7 +47,7 @@ export default function Home() {
           </div>
 
           <div
-            className="h-[50vh]  md:self-end md:w-full md:h-full"
+            className="h-[50vh]  self-end md:w-full md:h-full"
             style={{
               backgroundImage: 'url("/images/homemtriste.png")',
               backgroundSize: "contain",
