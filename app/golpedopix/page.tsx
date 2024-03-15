@@ -106,7 +106,7 @@ export default function Home() {
           <h2 className="mb-2 text-2xl font-bold text-center md:text-4xl">
             Ajudaremos você do início ao fim do processo!
           </h2>
-          <h2 className="mb-6 text-base">Quais serão as etapas?</h2>
+          <h3 className="mb-6 text-base">Quais serão as etapas?</h3>
 
           {/* etapas desktop para frente */}
 
@@ -120,9 +120,9 @@ export default function Home() {
                 {/* Linha laranja */}
               </div>
               <div>
-                <h6 className="mb-2 text-xl font-bold">
+                <h4 className="mb-2 text-xl font-bold">
                   1. Entrar em contato com o seu banco
-                </h6>
+                </h4>
                 <p className="mb-6">
                   Você deve entrar em contato com o seu banco e solicitar o MED
                   (Mecanismo especial de devolução), aconselhamos fazer por meio
@@ -139,9 +139,9 @@ export default function Home() {
                 {/* Linha laranja */}
               </div>
               <div>
-                <h6 className="mb-2 text-xl font-bold">
+                <h4 className="mb-2 text-xl font-bold">
                   2. Fazer um Boletim de ocorrência
-                </h6>
+                </h4>
                 <p className="mb-6">
                   Faça um BO online, você deve adicionar o máximo de informações
                   sobre o crime ocorrido, como a sua conta bancária, o valor
@@ -158,9 +158,9 @@ export default function Home() {
                 {/* Linha laranja */}
               </div>
               <div>
-                <h6 className="mb-2 text-xl font-bold">
+                <h4 className="mb-2 text-xl font-bold">
                   3. Coleta de provas da fraude
-                </h6>
+                </h4>
                 <p className="mb-6">
                   Nesse momento iremos produzir provas que comprovem o seu
                   direito, como prints da fraude, comprovantes das
@@ -177,7 +177,7 @@ export default function Home() {
                 {/* Linha laranja */}
               </div>
               <div>
-                <h6 className="mb-2 text-xl font-bold">4. Petição Inicial</h6>
+                <h4 className="mb-2 text-xl font-bold">4. Petição Inicial</h4>
                 <p className="mb-6">
                   Essa petição dá início ao processo judicial, nela apresentamos
                   todos os fatos ocorridos ao juiz juntamente com nossos
@@ -194,9 +194,9 @@ export default function Home() {
                 {/* Linha laranja */}
               </div>
               <div>
-                <h6 className="mb-2 text-xl font-bold">
+                <h4 className="mb-2 text-xl font-bold">
                   5. Audiência de Instrução
-                </h6>
+                </h4>
                 <p className="mb-6">
                   Nessa etapa iremos questionar o banco sobre pontos
                   importantíssimos para o curso do processo, produzindo provas
@@ -212,7 +212,7 @@ export default function Home() {
                 {/* Linha laranja */}
               </div>
               <div>
-                <h6 className="mb-2 text-xl font-bold">6. Sentença</h6>
+                <h4 className="mb-2 text-xl font-bold">6. Sentença</h4>
                 <p className="mb-6">
                   A sentença é onde o juiz vai decidir o que irá acontecer,
                   existem casos em que além da devolução dos valores perdidos
@@ -242,7 +242,7 @@ export default function Home() {
                   height={40}
                   alt="OK Verde"
                 />
-                <h6 className="text-xl font-bold ">Para quem serve:</h6>
+                <h3 className="text-xl font-bold ">Para quem serve:</h3>
               </div>
               <ul className="[&>li]:text-white [&>li]:w-full [&>li]:bg-orange-500 [&>li]:p-4 space-y-4 font-bold">
                 <li>Golpe do Falso Parente</li>
@@ -263,7 +263,7 @@ export default function Home() {
                   height={40}
                   alt="Cruz Vermelha"
                 />
-                <h6 className="text-xl font-bold">Para quem serve:</h6>
+                <h3 className="text-xl font-bold">Para quem serve:</h3>
               </div>
               <ul className="[&>li]:text-white [&>li]:w-full [&>li]:bg-orange-500 [&>li]:p-4 space-y-4 font-bold">
                 <li>Golpe Abaixo de R$ 3.000,00</li>
