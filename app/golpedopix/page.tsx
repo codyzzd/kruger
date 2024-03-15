@@ -49,7 +49,7 @@ export default function Home() {
           <div
             className="h-96 w-full self-end md:h-full"
             style={{
-              backgroundImage: 'url("/images/homemtriste.png")',
+              backgroundImage: 'url("/images/homemtriste2.png")',
               backgroundSize: "contain",
               backgroundPosition: "bottom center",
               backgroundRepeat: "no-repeat",
