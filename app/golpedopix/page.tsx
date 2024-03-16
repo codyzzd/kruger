@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Golpe do Pix",
+  description: "xxx.",
+};
 
 export default function Home() {
   return (
@@ -143,19 +149,18 @@ export default function Home() {
             </div>
 
             <div className="grid grid-rows-1 grid-cols-[22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr] items-center my-4">
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-              <div className="w-full border-t-2 border-orange-600"></div>{" "}
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-              <div className="w-full border-t-2 border-orange-600"></div>{" "}
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-              <div className="w-full border-t-2 border-orange-600"></div>{" "}
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-              <div className="w-full border-t-2 border-orange-600"></div>{" "}
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-              <div className="w-full border-t-2 border-orange-600"></div>{" "}
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-              <div className="w-full border-t-2 border-orange-600"></div>{" "}
-              
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
+              <div className="w-full border-t-2 border-orange-600"></div>
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
+              <div className="w-full border-t-2 border-orange-600"></div>
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
+              <div className="w-full border-t-2 border-orange-600"></div>
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
+              <div className="w-full border-t-2 border-orange-600"></div>
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
+              <div className="w-full border-t-2 border-orange-600"></div>
+              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
+              <div className="w-full border-t-2 border-orange-600"></div>
             </div>
 
             <div className="grid grid-rows-1 grid-cols-[22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr] ">
@@ -198,8 +203,8 @@ export default function Home() {
           <div className="md:mx-32 lg:hidden">
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                <div className="h-full border-l-2 border-orange-600"></div>{" "}
+                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
+                <div className="h-full border-l-2 border-orange-600"></div>
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">
@@ -215,8 +220,8 @@ export default function Home() {
 
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22 ">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                <div className="h-full border-l-2 border-orange-600"></div>{" "}
+                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
+                <div className="h-full border-l-2 border-orange-600"></div>
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">
@@ -232,8 +237,8 @@ export default function Home() {
 
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                <div className="h-full border-l-2 border-orange-600"></div>{" "}
+                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
+                <div className="h-full border-l-2 border-orange-600"></div>
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">
@@ -249,8 +254,8 @@ export default function Home() {
 
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                <div className="h-full border-l-2 border-orange-600"></div>{" "}
+                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
+                <div className="h-full border-l-2 border-orange-600"></div>
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">4. Petição Inicial</h4>
@@ -264,8 +269,8 @@ export default function Home() {
 
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-center w-22">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>{" "}
-                <div className="h-full border-l-2 border-orange-600"></div>{" "}
+                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
+                <div className="h-full border-l-2 border-orange-600"></div>
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">
@@ -281,7 +286,7 @@ export default function Home() {
 
             <div className="flex gap-x-4">
               <div className="flex flex-col items-center justify-start w-22">
-                <div className="w-[20px] h-[20px] rounded-full bg-orange-600"></div>{" "}
+                <div className="w-[20px] h-[20px] rounded-full bg-orange-600"></div>
               </div>
               <div>
                 <h4 className="mb-2 text-xl font-bold">6. Sentença</h4>
