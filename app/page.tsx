@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+    <link rel="preload" as="image" href="/images/herobackdefault.avif"></link>
       {/* header */}
       <Header />
 
