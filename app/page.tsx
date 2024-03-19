@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
+
 import Footer from "./sections/footer";
-
-
+import Header from "./sections/header";
 
 export const metadata: Metadata = {
   title: "Kruger",
-  description: "xxx.",
+  description:
+    "Krüger Toledo Advocacia: Especialistas em defender consumidores contra abusos e ilegalidades dos grandes bancos. Conheça nossa equipe liderada pela sócia-líder Esther Krüger Toledo, comprometida em fornecer soluções personalizadas para superar o endividamento. Todos os direitos reservados.",
 };
 
 export default function Home() {
   return (
     <>
       {/* header */}
+      <Header />
 
       {/* hero */}
       <section
         style={{
-          backgroundImage: 'url("/images/fundohero.avif")',
+          backgroundImage: 'url("/images/herobackdefault.avif")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -33,7 +35,168 @@ export default function Home() {
 
       {/* atuação */}
       <section>
-
+        <div className="container p-8 mx-auto   py-16">
+          <h2 className="mb-8 text-2xl font-bold text-center">
+            Áreas de Atuação
+          </h2>
+          <div className="flex overflow-x-auto w-full pb-8 gap-8  [&_h3]:font-bold [&_h3]:text-lg [&>div]:md:w-[300px] [&>div]:w-[250px] [&>div]:flex-shrink-0">
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage: 'url("/images/atuacao/ressarcimento.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Ressarcimento de RMC:</h3>
+              <p>
+                Analisamos as operações de RMC para verificar ilegalidades e
+                levantar valores cobrados de forma indevida.
+              </p>
+            </div>
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage: 'url("/images/atuacao/revisional.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Revisional de contratos:</h3>
+              <p>
+                Muitas vezes ao assinar o contrato, o cliente é induzido ao
+                erro. Erro que pode custar caro. Analisamos todos os seus
+                contratos para verificar taxas abusivas, seguros aplicados de
+                maneira ilegal, juros abusivos. Muitas vezes, nessa análise,
+                conseguimos diminuir muito os valores das parcelas e até mesmo
+                reaver valores que foram pagos indevidamente.
+              </p>
+            </div>
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage:
+                    'url("/images/atuacao/golpeportabilidade.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Golpe da portabilidade:</h3>
+              <p>
+                Muitas vezes na tentativa de diminuir as dívidas o consumidor
+                acaba fazendo a portabilidade bancária. Com falsas promessas de
+                que os valores a ser pagas irão diminuir, assinam contratos que
+                não condizem com o produto oferecido.
+              </p>
+            </div>
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage: 'url("/images/atuacao/revogacao.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Revogação de liminares de busca e apreensão:</h3>
+              <p>
+                Revogamos junto ao juízo, liminares de busca e apreensão de
+                veículos e máquinas. A análise do processo detecta falhas
+                administrativas anteriores ao deferimento da busca e apreensão.
+              </p>
+            </div>
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage: 'url("/images/atuacao/contestacao.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Contestação de cobrança de valores indevidos:</h3>
+              <p>
+                Se você considera ter sido lesado pelos bancos de alguma forma,
+                você tem direito a reparação pecuniária aos danos causados sendo
+                que em alguns casos podem superar R$ 50.000,00 (cinquenta mil
+                reais).
+              </p>
+            </div>
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage: 'url("/images/atuacao/revisao.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Revisão de contratos antigos:</h3>
+              <p>
+                Em milhares de casos os bancos renegociam suas dívidas e fazem
+                novo contrato maquiando as cobranças ilegais anteriormente
+                lançadas em sua conta.
+              </p>
+            </div>
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage: 'url("/images/atuacao/prestacao.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Prestação de contas de venda de veículos leiloados:</h3>
+              <p>
+                Teve seu veículo leiloado sem a devida prestação de contas pelos
+                bancos ou financeiras, saiba que você pode ter dinheiro
+                depositado para receber.
+              </p>
+            </div>
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage: 'url("/images/atuacao/danomoral.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Dano moral na portabilidade de conta bancária:</h3>
+              <p>
+                Na maioria das vezes, quando você faz a portabilidade de sua
+                conta bancária, os bancos costumam reter todo o seu salário,
+                inclusive os futuros, para quitar pendências ou cobranças.
+              </p>
+            </div>
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage: 'url("/images/atuacao/acessoria.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Assessoria em portabilidade de contas bancárias:</h3>
+              <p>
+                Para não sofrer danos e indisposições com a portabilidade junto
+                aos bancos e seus gerentes, acompanhamos no processo todo.
+              </p>
+            </div>
+            <div className="">
+              <div
+                className="h-32 mb-2 "
+                style={{
+                  backgroundImage: 'url("/images/atuacao/retomada.avif")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}></div>
+              <h3>Retomada de veículos apreendidos:</h3>
+              <p>
+                Se o seu bem foi apreendido em busca e apreensão judicial,
+                analisaremos todo o processo e encontraremos falhas que existem
+                na maioria dos casos, reavendo o seu bem e colocando-o na sua
+                posse.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* escritorio kruger pt1 */}
@@ -45,7 +208,7 @@ export default function Home() {
             <div
               className="h-48 md:h-full"
               style={{
-                backgroundImage: 'url("/images/ceo.avif")',
+                backgroundImage: 'url("/images/part1.avif")',
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}></div>
@@ -78,7 +241,7 @@ export default function Home() {
             <div
               className="h-48 md:h-full md:order-2"
               style={{
-                backgroundImage: 'url("/images/ceo.avif")',
+                backgroundImage: 'url("/images/part2.avif")',
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}></div>
@@ -91,7 +254,7 @@ export default function Home() {
                 <p className="font-bold">
                   Contamos com uma equipe formado por:
                 </p>
-                <ul className="list-disc ms-4">
+                <ul className="list-disc ms-8">
                   <li>Advogados auxiliares;</li>
                   <li>Contadores experientes;</li>
                   <li>Técnicos contadores auxiliares;</li>
@@ -113,7 +276,7 @@ export default function Home() {
             <div
               className="w-full h-full min-h-72 lg:min-h-0"
               style={{
-                backgroundImage: 'url("/images/ceo.avif")',
+                backgroundImage: 'url("/images/esther.avif")',
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}></div>
@@ -130,7 +293,7 @@ export default function Home() {
       </section>
 
       {/* rodape */}
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
