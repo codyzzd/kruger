@@ -19,8 +19,8 @@ export default function Home() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
-        <div className="container grid grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1   mx-auto  lg:h-[80vh]  ">
-          <div className="flex flex-col justify-center px-8 conteudo md:py-16">
+        <div className="container flex flex-col space-y-8 lg:flex-row  mx-auto  lg:h-[80vh]  ">
+          <div className="flex flex-col justify-center px-8 conteudo md:py-16 pt-16">
             <Image
               className="mb-16"
               src="/images/logokruger.png"
@@ -81,20 +81,21 @@ export default function Home() {
             Veja mais sobre como podemos te ajudar:
           </h2>
           <iframe
-            src="https://www.youtube.com/watch?v=gfU1iZnjRZM"
+            src="https://www.youtube.com/embed/HxLWk3tSgaA"
             frameBorder="0"
             allowFullScreen
+            className="aspect-video w-full h-[190px] md:h-[400px] lg:w-[700px]"
           />
-
+          {/*
           <video
             width="320"
             height="240"
             controls
             preload="auto"
-            className="md:w-3/4">
+            className="md:w-3/4 hidden">
             <source src="/videos/golpedopix.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+        </video>*/}
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">

@@ -10,6 +10,17 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
       {/* nav */}
       <section>
         <nav className="container mx-auto py-4 px-8 flex  justify-center">
@@ -51,7 +62,13 @@ export default function Home() {
           <h2 className="mb-3 text-2xl font-bold text-center md:text-4xl">
             Veja mais sobre a medida:
           </h2>
-          <video
+          <iframe
+            src="https://www.youtube.com/embed/ZiWHgEIhSmQ"
+            frameBorder="0"
+            allowFullScreen
+            className="aspect-video w-full h-[190px] md:h-[400px] lg:w-[700px]"
+          />
+          {/* <video
             width="320"
             height="240"
             controls
@@ -59,7 +76,8 @@ export default function Home() {
             className="md:w-3/4">
             <source src="/videos/golpedopix.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
+
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">
@@ -79,7 +97,9 @@ export default function Home() {
           <h3 className="mb-6 text-base">E como funciona a Ação Cautelar?</h3>
 
           <div className="[&_h6]:font-bold [&_h6]:text-xl border-l-orange-500 border-s-[1px] space-y-8 py-8 lg:w-8/12">
-            <div id="first_question" className="flex flex-row space-x-2 items-start">
+            <div
+              id="first_question"
+              className="flex flex-row space-x-2 items-start">
               <div className="flex flex-row w-20 min-w-16 items-center">
                 <hr className="border-orange-500 w-full"></hr>
                 <Image
@@ -99,8 +119,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div id="second_question" className="flex flex-row space-x-2 items-start">
-            <div className="flex flex-row w-20 min-w-16 items-center">
+            <div
+              id="second_question"
+              className="flex flex-row space-x-2 items-start">
+              <div className="flex flex-row w-20 min-w-16 items-center">
                 <hr className="border-orange-500 w-full"></hr>
                 <Image
                   src="/images/map.png"
@@ -111,17 +133,19 @@ export default function Home() {
                 />
               </div>
               <div className="">
-              <h6>2. Apresentação de documentos e alegações das partes:</h6>
-              <p>
-                Nessa etapa os integrantes do processo apresentam as
-                documentações relevantes e o juiz pode solicitar mais
-                informações.
-              </p>
+                <h6>2. Apresentação de documentos e alegações das partes:</h6>
+                <p>
+                  Nessa etapa os integrantes do processo apresentam as
+                  documentações relevantes e o juiz pode solicitar mais
+                  informações.
+                </p>
               </div>
             </div>
 
-            <div id="third_question" className="flex flex-row space-x-2 items-start">
-            <div className="flex flex-row w-20 min-w-16 items-center">
+            <div
+              id="third_question"
+              className="flex flex-row space-x-2 items-start">
+              <div className="flex flex-row w-20 min-w-16 items-center">
                 <hr className="border-orange-500 w-full"></hr>
                 <Image
                   src="/images/map.png"
@@ -132,20 +156,14 @@ export default function Home() {
                 />
               </div>
               <div className="">
-              <h6>3. Sentença:</h6>
-              <p>
-                A sentença é o momento em que o juiz vai decidir definitivamente
-                sobre os descontos. Existem casos em que o banco é condenado a
-                pagar danos morais em favor do servidor.
-              </p>
+                <h6>3. Sentença:</h6>
+                <p>
+                  A sentença é o momento em que o juiz vai decidir
+                  definitivamente sobre os descontos. Existem casos em que o
+                  banco é condenado a pagar danos morais em favor do servidor.
+                </p>
               </div>
             </div>
-
-
-
-
-
-
           </div>
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"

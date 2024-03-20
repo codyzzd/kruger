@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/*<Script
+        <Script
           id="show-banner"
           dangerouslySetInnerHTML={{
             __html: `<script>
@@ -47,7 +47,7 @@ export default function RootLayout({
     src="https://www.facebook.com/tr?id=3544395189204350&ev=PageView&noscript=1"
     /></noscript>`,
           }}
-        />*/}
+        />
       </head>
 
       <body className={sourceserif.className}>{children}</body>

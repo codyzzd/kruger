@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
+import { EmblaCarousel } from "./sections/atuacao";
 import Footer from "./sections/footer";
 import Header from "./sections/header";
 
 export const metadata: Metadata = {
-  title: "Kruger",
   description:
     "Krüger Toledo Advocacia: Especialistas em defender consumidores contra abusos e ilegalidades dos grandes bancos. Conheça nossa equipe liderada pela sócia-líder Esther Krüger Toledo, comprometida em fornecer soluções personalizadas para superar o endividamento. Todos os direitos reservados.",
 };
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-    <link rel="preload" as="image" href="/images/herobackdefault.avif"></link>
+      <link rel="preload" as="image" href="/images/herobackdefault.avif"></link>
       {/* header */}
       <Header />
 
@@ -40,7 +40,9 @@ export default function Home() {
           <h2 className="mb-8 text-2xl font-bold text-center">
             Áreas de Atuação
           </h2>
-          <div className="flex overflow-x-auto w-full pb-8 gap-8  [&_h3]:font-bold [&_h3]:text-lg [&>div]:md:w-[300px] [&>div]:w-[250px] [&>div]:flex-shrink-0">
+          <EmblaCarousel></EmblaCarousel>
+
+          <div className="flex overflow-x-auto w-full pb-8 gap-8  [&_h3]:font-bold [&_h3]:text-lg [&>div]:md:w-[300px] [&>div]:w-[250px] [&>div]:flex-shrink-0 hidden">
             <div className="">
               <div
                 className="h-32 mb-2 "
@@ -202,7 +204,7 @@ export default function Home() {
 
       {/* escritorio kruger pt1 */}
       <section>
-        <div className="container p-8 mx-auto  lg:w-2/3 xl:w-1/2 py-16">
+        <div className="container p-8 mx-auto   xl:w-10/12 py-16">
           <div
             className="grid grid-cols-1 grid-rows-2 gap-8 md:grid-cols-2 md:grid-rows-1"
             style={{ gridTemplateRows: "min-content auto" }}>
@@ -235,7 +237,7 @@ export default function Home() {
 
       {/* escritorio kruger pt2 */}
       <section>
-        <div className="container p-8 mx-auto py-16 lg:w-2/3 xl:w-1/2">
+        <div className="container p-8 mx-auto py-16 xl:w-10/12">
           <div
             className="grid grid-cols-1 grid-rows-2 gap-8 md:grid-cols-2 md:grid-rows-1 "
             style={{ gridTemplateRows: "min-content auto" }}>
