@@ -62,21 +62,21 @@ export default function Home() {
           <h2 className="mb-3 text-2xl font-bold text-center md:text-4xl">
             Veja mais sobre a medida:
           </h2>
-          <iframe
-            src="https://www.youtube.com/embed/ZiWHgEIhSmQ"
+          {/* <iframe
+            src="https://www.youtube.com/embed/ZiWHgEIhSmQ?rel=0&modestbranding=1"
             frameBorder="0"
             allowFullScreen
             className="aspect-video w-full h-[190px] md:h-[400px] lg:w-[700px]"
-          />
-          {/* <video
+          /> */}
+          <video
             width="320"
             height="240"
             controls
             preload="auto"
             className="md:w-3/4">
-            <source src="/videos/golpedopix.mp4" type="video/mp4" />
+            <source src="/videos/acaocautelar2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video> */}
+          </video>
 
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
