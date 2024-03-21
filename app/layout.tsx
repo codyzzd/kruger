@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Source_Serif_4 } from "next/font/google";
 import Script from "next/script";
@@ -50,7 +51,10 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={sourceserif.className}>{children}</body>
+      <body className={sourceserif.className}>
+        <SpeedInsights />
+        {children}
+      </body>
     </html>
   );
 }
