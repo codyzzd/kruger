@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,7 +30,7 @@ export default function Home() {
           />
           <div className="flex flex-col items-center space-y-8 text-center">
             <div className="flex flex-col items-center space-y-4">
-              <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-full lg:text-5xl">
+              <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-full lg:text-5xl ss4">
                 Reduza suas dívidas com a ajuda de um advogado especialista em
                 direito bancário
               </h1>
@@ -37,6 +38,7 @@ export default function Home() {
                 Com a ajuda de um advogado especialista é possível renegociar e
                 reduzir suas dívidas.
               </h2>
+
             </div>
             <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
             <Link
@@ -79,7 +81,7 @@ export default function Home() {
       {/* video */}
       <section className="text-white bg-[#0A2136]">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
-          <h2 className="text-2xl text-center md:text-3xl lg:text-4xl">
+          <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
             Veja mais sobre como podemos te ajudar:
           </h2>
           {/* <iframe
@@ -120,7 +122,7 @@ export default function Home() {
       <section className="text-white bg-[#022442] ">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
           <div className="flex flex-col space-y-2 text-center">
-            <h2 className="text-2xl text-center md:text-3xl lg:text-4xl">
+            <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
               Ajudaremos você do início ao fim do processo!
             </h2>
             <h3 className="text-lg lg:text-xl">Quais serão as etapas?</h3>
@@ -191,7 +193,7 @@ export default function Home() {
           </Link>
           <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
           <div className="p-6 space-y-2 text-center text-white bg-orange-500 rounded-2xl lg:w-1/2">
-            <h4 className="text-2xl font-semibold lg:text-4xl">Acordo com o banco</h4>
+            <h4 className="text-2xl font-semibold lg:text-4xl ss4">Acordo com o banco</h4>
             <p className="lg:text-xl">
               Muitas vezes é possível negociar com o banco durante o processo e
               fazer um acordo extrajudicial com até 90% de desconto antes do fim
@@ -205,13 +207,13 @@ export default function Home() {
       <section className="text-white bg-[#0A2136]">
         <div className="container flex flex-col items-center p-8 mx-auto space-y-8 ">
           <div className="flex flex-col space-y-2 text-center">
-            <h2 className="text-2xl text-center md:text-3xl lg:text-4xl">
+            <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
               Veja os casos que podemos lhe ajudar
             </h2>
             <h3 className="text-lg lg:text-xl">Dívidas que podemos reduzir</h3>
           </div>
 
-          <div className="flex flex-col gap-2 md:px-48 lg:w-[54%] md:gap-4  ">
+          <div className="flex flex-col gap-2 md:gap-4 ">
             <div className="flex flex-row gap-4 font-bold uppercase">
               <Image
                 src="/images/ok.png"
@@ -271,7 +273,7 @@ export default function Home() {
 
           <div className="space-y-8 conteudo md:w-1/2">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl">Quem Somos?</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl ss4">Quem Somos?</h2>
               <p className="lg:text-lg">
                 O escritório Kruger Toledo Advocacia é um escritório
                 especializado em direito bancário, comprometido em valorizar seu
@@ -385,7 +387,7 @@ export default function Home() {
               alt="Logo Kruger Advocacia"
             />
           </div>
-          <h2 className="mb-2 text-2xl font-bold text-center md:text-4xl">
+          <h2 className="mb-2 text-2xl font-bold text-center md:text-4xl ss4">
             O que dizem da Advocacia Krüger Toledo?
           </h2>
 

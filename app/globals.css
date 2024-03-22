@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.ss4{
+font-family: var(--ss4-font);
+}
+*{
+  font-family: var(--montserrat-font);
+}
 /*
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,6 +23,7 @@
 }
 */
 body {
+
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

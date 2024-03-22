@@ -1,12 +1,20 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { Source_Serif_4 } from "next/font/google";
+import { Montserrat, Source_Serif_4 } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-//const inter = Inter({ subsets: ["latin"] });
-const sourceserif = Source_Serif_4({ subsets: ["latin"] });
+const sourceserif = Source_Serif_4({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--ss4-font",
+});
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--montserrat-font",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -52,7 +60,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={sourceserif.className}>
+      <body className={`${sourceserif.variable} ${montserrat.variable}`}>
         <SpeedInsights />
         {children}
         <Analytics />
