@@ -23,13 +23,13 @@ export default function Home() {
       />
       {/* nav */}
       <section>
-        <nav className="container mx-auto py-4 px-8 flex  justify-center">
+        <nav className="container flex justify-center px-8 py-4 mx-auto ">
           <Image
             src="/images/logokrugerblack.webp"
             width={254}
             height={104}
             alt="Logo da Krüger Toledo Advocacia"
-            className="h-12 w-auto"
+            className="w-auto h-12"
           />
         </nav>
       </section>
@@ -42,12 +42,12 @@ export default function Home() {
           backgroundPosition: "center",
         }}
         className="py-32 md:py-16">
-        <div className="container flex flex-col justify-center  h-full p-8 mx-auto  text-white text-center space-y-4 items-center lg:px-64 ">
+        <div className="container flex flex-col items-center justify-center h-full p-8 mx-auto text-center text-white  space-y-4 lg:px-64">
           <h1 className="text-4xl font-bold">
             Uma medida judicial para interromper o banco de pegar todo seu
             salário
           </h1>
-          <hr className="border-orange-500 w-10/12"></hr>
+          <hr className="w-10/12 border-orange-500"></hr>
           <p className="text-xl">
             Através da ação cautelar, você estará fazendo uma desautorização
             judicial para impedir que o banco desconte a maior parte do seu
@@ -81,7 +81,7 @@ export default function Home() {
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">
-            <p className="px-4 py-2 text-white transition-all bg-orange-500 hover:text-orange-500 hover:bg-white">
+            <p className="px-4 py-2 text-white bg-orange-500 transition-all hover:text-orange-500 hover:bg-white">
               Como recuperar o meu salário!
             </p>
           </Link>
@@ -99,15 +99,15 @@ export default function Home() {
           <div className="[&_h6]:font-bold [&_h6]:text-xl border-l-orange-500 border-s-[1px] space-y-8 py-8 lg:w-8/12">
             <div
               id="first_question"
-              className="flex flex-row space-x-2 items-start">
-              <div className="flex flex-row w-20 min-w-16 items-center">
-                <hr className="border-orange-500 w-full"></hr>
+              className="flex flex-row items-start space-x-2">
+              <div className="flex flex-row items-center w-20 min-w-16">
+                <hr className="w-full border-orange-500"></hr>
                 <Image
                   src="/images/map.png"
                   width={32}
                   height={32}
                   alt="Pin de GPS Map"
-                  className=" w-auto"
+                  className="w-auto "
                 />
               </div>
               <div className="">
@@ -121,15 +121,15 @@ export default function Home() {
 
             <div
               id="second_question"
-              className="flex flex-row space-x-2 items-start">
-              <div className="flex flex-row w-20 min-w-16 items-center">
-                <hr className="border-orange-500 w-full"></hr>
+              className="flex flex-row items-start space-x-2">
+              <div className="flex flex-row items-center w-20 min-w-16">
+                <hr className="w-full border-orange-500"></hr>
                 <Image
                   src="/images/map.png"
                   width={32}
                   height={32}
                   alt="Pin de GPS Map"
-                  className=" w-auto"
+                  className="w-auto "
                 />
               </div>
               <div className="">
@@ -144,15 +144,15 @@ export default function Home() {
 
             <div
               id="third_question"
-              className="flex flex-row space-x-2 items-start">
-              <div className="flex flex-row w-20 min-w-16 items-center">
-                <hr className="border-orange-500 w-full"></hr>
+              className="flex flex-row items-start space-x-2">
+              <div className="flex flex-row items-center w-20 min-w-16">
+                <hr className="w-full border-orange-500"></hr>
                 <Image
                   src="/images/map.png"
                   width={32}
                   height={32}
                   alt="Pin de GPS Map"
-                  className=" w-auto"
+                  className="w-auto "
                 />
               </div>
               <div className="">
@@ -168,7 +168,7 @@ export default function Home() {
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">
-            <p className="px-4 py-2 text-white transition-all bg-orange-500 hover:text-orange-500 hover:bg-white">
+            <p className="px-4 py-2 text-white bg-orange-500 transition-all hover:text-orange-500 hover:bg-white">
               Conte com nossa ajuda!
             </p>
           </Link>
@@ -181,7 +181,7 @@ export default function Home() {
           <h2 className="mb-3 text-2xl font-bold text-center md:text-4xl">
             Faça uma análise com um profissional!
           </h2>
-          <p className="text-center text-2xl">
+          <p className="text-2xl text-center">
             Envie seu último contracheque e extrato de conta corrente com
             descontos para avaliarmos a possibilidade de ajuizamento da ação.
           </p>
@@ -189,7 +189,7 @@ export default function Home() {
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">
-            <p className="px-4 py-2 text-white transition-all bg-orange-500 hover:text-orange-500 hover:bg-white">
+            <p className="px-4 py-2 text-white bg-orange-500 transition-all hover:text-orange-500 hover:bg-white">
               Quero fazer a análise!
             </p>
           </Link>
@@ -204,7 +204,7 @@ export default function Home() {
           </h2>
           <div
             id="listas"
-            className="space-y-8 md:flex md:flex-row   md:space-y-0 md:space-x-8  lg:px-24 ">
+            className="space-y-8 md:flex md:flex-row  md:space-y-0 md:space-x-8 lg:px-24">
             <div id="bom">
               <div className="flex flex-row items-center mb-4 space-x-4">
                 <Image
@@ -312,7 +312,7 @@ export default function Home() {
               <Link
                 href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
                 className="flex flex-row space-x-4 ">
-                <p className="px-4 py-2 text-white transition-all bg-orange-500 hover:text-orange-500 hover:bg-white">
+                <p className="px-4 py-2 text-white bg-orange-500 transition-all hover:text-orange-500 hover:bg-white">
                   Conte com nossa ajuda!
                 </p>
               </Link>
@@ -683,7 +683,7 @@ export default function Home() {
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">
-            <p className="px-4 py-2 text-white transition-all bg-orange-500 hover:text-orange-500 hover:bg-white">
+            <p className="px-4 py-2 text-white bg-orange-500 transition-all hover:text-orange-500 hover:bg-white">
               Fale agora com um advogado
             </p>
           </Link>

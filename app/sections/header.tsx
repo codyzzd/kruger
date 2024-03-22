@@ -15,17 +15,17 @@ export default function Header() {
   const pathname = usePathname();
   return (
     <section>
-      <nav className="container mx-auto py-4 px-8 flex justify-between items-center">
+      <nav className="container flex items-center justify-between px-8 py-4 mx-auto">
         <Image
           src="/images/logokrugerblack.webp"
           width={254}
           height={104}
           alt="Logo da Krüger Toledo Advocacia"
-          className="h-12 w-auto"
+          className="w-auto h-12"
         />
         <div className="flex flex-row">
           <ul
-            className="flex flex-row space-x-4 shrink-0 hidden md:flex "
+            className="flex flex-row hidden space-x-4 shrink-0 md:flex "
             id="menu">
             {navLinks.map((link) => {
               const isActive =
@@ -48,7 +48,7 @@ export default function Header() {
           </ul>
           <button
             id="hamburgerBtn"
-            className=" text-black focus:outline-none md:hidden"
+            className="text-black  focus:outline-none md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <svg
               className="w-6 h-6"

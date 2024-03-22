@@ -24,7 +24,7 @@ export default function Home() {
           backgroundPosition: "center",
         }}
         className="py-32 md:py-16">
-        <div className="container flex flex-col justify-center  h-full p-8 mx-auto md:py-16 text-white text-center space-y-4">
+        <div className="container flex flex-col justify-center h-full p-8 mx-auto text-center text-white  md:py-16 space-y-4">
           <p className="text-xl">
             Assistência aos superendividados de uma forma integral
           </p>
@@ -36,7 +36,7 @@ export default function Home() {
 
       {/* atuação */}
       <section>
-        <div className="container p-8 mx-auto   py-16">
+        <div className="container p-8 py-16 mx-auto ">
           <h2 className="mb-8 text-2xl font-bold text-center">
             Áreas de Atuação
           </h2>
@@ -204,7 +204,7 @@ export default function Home() {
 
       {/* escritorio kruger pt1 */}
       <section>
-        <div className="container p-8 mx-auto   xl:w-10/12 py-16">
+        <div className="container p-8 py-16 mx-auto  xl:w-10/12">
           <div
             className="grid grid-cols-1 grid-rows-2 gap-8 md:grid-cols-2 md:grid-rows-1"
             style={{ gridTemplateRows: "min-content auto" }}>
@@ -237,7 +237,7 @@ export default function Home() {
 
       {/* escritorio kruger pt2 */}
       <section>
-        <div className="container p-8 mx-auto py-16 xl:w-10/12">
+        <div className="container p-8 py-16 mx-auto xl:w-10/12">
           <div
             className="grid grid-cols-1 grid-rows-2 gap-8 md:grid-cols-2 md:grid-rows-1 "
             style={{ gridTemplateRows: "min-content auto" }}>
@@ -271,7 +271,7 @@ export default function Home() {
 
       {/* esther */}
       <section>
-        <div className="container p-8 mx-auto py-16 lg:w-2/3 xl:w-1/2">
+        <div className="container p-8 py-16 mx-auto lg:w-2/3 xl:w-1/2">
           <h2 className="mb-8 text-4xl font-bold text-center">
             Esther Krüger Toledo
           </h2>

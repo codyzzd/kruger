@@ -13,29 +13,32 @@ export default function Home() {
     <>
       {/* hero */}
       <section
-        className="text-white md:overflow-hidden"
+        className="text-white "
         style={{
-          backgroundImage: 'url("/images/fundohero.avif")',
+          backgroundImage: 'url("/images/maocaneta.avif")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
-        <div className="container flex flex-col space-y-8 lg:flex-row  mx-auto  lg:h-[80vh]  ">
-          <div className="flex flex-col justify-center px-8 conteudo md:py-16 pt-16">
-            <Image
-              className="mb-16"
-              src="/images/logokruger.png"
-              width={150}
-              height={40}
-              alt="Logo Kruger Advocacia"
-            />
-            <h1 className="mb-3 text-4xl font-bold md:text-5xl">
-              Recupere seu dinheiro perdido no golpe do pix
-            </h1>
-            <h2 className="text-lg ">
-              Através da nossa metodologia é possível recuperar os valores
-              perdidos. Não fique no prejuízo!
-            </h2>
-            <hr className="my-8 border-t-2 border-orange-500"></hr>
+        <div className="container flex flex-col items-center justify-center p-8 py-16 mx-auto space-y-16 ">
+          <Image
+            className=""
+            src="/images/logokruger.png"
+            width={150}
+            height={40}
+            alt="Logo Kruger Advocacia"
+          />
+          <div className="flex flex-col items-center space-y-8 text-center">
+            <div className="flex flex-col items-center space-y-4">
+              <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-full lg:text-5xl">
+                Reduza suas dívidas com a ajuda de um advogado especialista em
+                direito bancário
+              </h1>
+              <h2 className="text-lg md:px-20 lg:text-xl lg:px-48">
+                Com a ajuda de um advogado especialista é possível renegociar e
+                reduzir suas dívidas.
+              </h2>
+            </div>
+            <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
             <Link
               href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
               className="flex flex-row space-x-4">
@@ -46,21 +49,20 @@ export default function Home() {
                 alt="Whatsapp Icon"
                 className=" max-h-[40px] max-w-[40px]"
               />
-
               <p className="px-4 py-2 text-white transition-all bg-green-600 hover:text-green-600 hover:bg-white">
                 Fale agora com um advogado
               </p>
             </Link>
           </div>
 
-          <div
-            className="h-96 w-full self-end md:h-full"
+          {/* <div
+            className="self-end w-full h-96 md:h-full"
             style={{
               backgroundImage: 'url("/images/homemtriste.avif")',
               backgroundSize: "contain",
               backgroundPosition: "bottom center",
               backgroundRepeat: "no-repeat",
-            }}></div>
+            }}></div> */}
           {/* <div id="photo" className="items-end px-8 md:w-full md:flex ">
             <Image
               src="/images/homemtriste.png"
@@ -77,7 +79,7 @@ export default function Home() {
       {/* video */}
       <section className="text-white bg-[#0A2136]">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
-          <h2 className="mb-3 text-2xl font-bold text-center md:text-4xl">
+          <h2 className="text-2xl text-center md:text-3xl lg:text-4xl">
             Veja mais sobre como podemos te ajudar:
           </h2>
           {/* <iframe
@@ -95,7 +97,7 @@ export default function Home() {
             className="md:w-3/4">
             <source src="/videos/golpedopix2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-        </video>
+          </video>
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">
@@ -116,244 +118,141 @@ export default function Home() {
 
       {/* etapas */}
       <section className="text-white bg-[#022442] ">
-        <div className="container flex flex-col items-center justify-center p-8 mx-auto md:py-16">
-          <h2 className="mb-2 text-2xl font-bold text-center md:text-4xl">
-            Ajudaremos você do início ao fim do processo!
-          </h2>
-          <h3 className="mb-6 text-base">Quais serão as etapas?</h3>
-
-          {/* etapas desktop para frente */}
-          <div className="hidden lg:block">
-            <div className="grid grid-rows-1 grid-cols-[22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr] [&>div]:self-end">
-              <div className="col-span-2 col-start-3">
-                <h4 className="mb-2 text-xl font-bold">
-                  2. Fazer um Boletim de ocorrência
-                </h4>
-                <p className="">
-                  Faça um BO online, você deve adicionar o máximo de informações
-                  sobre o crime ocorrido, como a sua conta bancária, o valor
-                  enviado, a conta que recebeu o valor.
-                </p>
-              </div>
-
-              <div className="col-span-2 col-start-7">
-                <h4 className="mb-2 text-xl font-bold">4. Petição Inicial</h4>
-                <p className="">
-                  Essa petição dá início ao processo judicial, nela apresentamos
-                  todos os fatos ocorridos ao juiz juntamente com nossos
-                  pedidos.
-                </p>
-              </div>
-
-              <div className="col-span-2 col-start-11">
-                <h4 className="mb-2 text-xl font-bold">6. Sentença</h4>
-                <p className="">
-                  A sentença é onde o juiz vai decidir o que irá acontecer,
-                  existem casos em que além da devolução dos valores perdidos
-                  para os golpistas o banco é condenado a pagar danos morais
-                  pelo transtorno causado.
-                </p>
-              </div>
+        <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
+          <div className="flex flex-col space-y-2 text-center">
+            <h2 className="text-2xl text-center md:text-3xl lg:text-4xl">
+              Ajudaremos você do início ao fim do processo!
+            </h2>
+            <h3 className="text-lg lg:text-xl">Quais serão as etapas?</h3>
+          </div>
+          <div className="grid grid-cols-1 grid-rows-[min-content,min-content,min-content,min-content,min-content] lg:grid-cols-3 lg:grid-rows-2 [&>div]:p-6 [&>div]:border-[1px] [&>div]:border-orange-500 [&>div]:rounded-2xl [&>div]:space-y-2  [&_h4]:text-xl [&_h4]:font-bold gap-6 ">
+            <div className="">
+              <h4>1. Coleta de documentos</h4>
+              <p>
+                Nesse momento iremos coletar todos documentos pertinentes para o
+                seu caso, como os contratos, detalhamento de evolução de
+                dívidas, etc…
+              </p>
             </div>
-
-            <div className="grid grid-rows-1 grid-cols-[22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr] items-center my-4">
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
-              <div className="w-full border-t-2 border-orange-600"></div>
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
-              <div className="w-full border-t-2 border-orange-600"></div>
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
-              <div className="w-full border-t-2 border-orange-600"></div>
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
-              <div className="w-full border-t-2 border-orange-600"></div>
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
-              <div className="w-full border-t-2 border-orange-600"></div>
-              <div className="w-[24px] h-[24px] rounded-full bg-orange-600"></div>
-              <div className="w-full border-t-2 border-orange-600"></div>
+            <div>
+              <h4>2. Análise documental</h4>
+              <p>
+                Nessa etapa, nossos especialistas irão verificar as minúcias dos
+                seus contratos, buscando e identificando irregularidades e
+                abusividades.
+              </p>
             </div>
-
-            <div className="grid grid-rows-1 grid-cols-[22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr,22px,1fr] ">
-              <div className="col-span-2 col-start-1">
-                <h4 className="mb-2 text-xl font-bold">
-                  1. Entrar em contato com o seu banco
-                </h4>
-                <p className="">
-                  Você deve entrar em contato com o seu banco e solicitar o MED
-                  (Mecanismo especial de devolução), aconselhamos fazer por meio
-                  do próprio aplicativo.
-                </p>
-              </div>
-
-              <div className="col-span-2 col-start-5">
-                <h4 className="mb-2 text-xl font-bold">
-                  3. Coleta de provas da fraude
-                </h4>
-                <p className="">
-                  Nesse momento iremos produzir provas que comprovem o seu
-                  direito, como prints da fraude, comprovantes das
-                  transferências, protocolos do banco etc.
-                </p>
-              </div>
-
-              <div className="col-span-2 col-start-9">
-                <h4 className="mb-2 text-xl font-bold">
-                  5. Audiência de Instrução
-                </h4>
-                <p className="">
-                  Nessa etapa iremos questionar o banco sobre pontos
-                  importantíssimos para o curso do processo, produzindo provas
-                  em nosso favor.
-                </p>
-              </div>
+            <div>
+              <h4>3. Elaboração de petição inicial</h4>
+              <p>
+                Após identificarmos as irregularidades, será elaborada petição
+                inicial da sua ação apontando as irregularidades e apresentando
+                os cálculos para demonstrar o valor justo a ser pago.
+              </p>
+            </div>
+            <div>
+              <h4>4. Protocolo da petição inicial</h4>
+              <p>
+                Nesse documento constam todos os fatos ocorridos juntamente com
+                os pedidos que devem ser analisados pelo o juiz.
+              </p>
+            </div>
+            <div>
+              <h4>5. Apresentação de documentos e alegações das partes</h4>
+              <p>
+                Nessa etapa os integrantes do processo apresentam as
+                documentações relevantes e o juiz pode solicitar mais
+                informações.
+              </p>
+            </div>
+            <div>
+              <h4>6. Sentença</h4>
+              <p>
+                Na sentença é onde o juiz vai decidir qual será o valor final da
+                dívida com base em todas informações apresentadas durante o
+                processo.
+              </p>
             </div>
           </div>
+          <Link
+            href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
+            className="flex flex-row space-x-4 ">
+            <Image
+              src="/images/whatsapp.png"
+              width={40}
+              height={40}
+              alt="Whatsapp Icon"
+              className=" max-h-[40px] max-w-[40px]"
+            />
 
-          {/* etapas até tablet */}
-          <div className="md:mx-32 lg:hidden">
-            <div className="flex gap-x-4">
-              <div className="flex flex-col items-center justify-center w-22">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
-                <div className="h-full border-l-2 border-orange-600"></div>
-              </div>
-              <div>
-                <h4 className="mb-2 text-xl font-bold">
-                  1. Entrar em contato com o seu banco
-                </h4>
-                <p className="mb-6">
-                  Você deve entrar em contato com o seu banco e solicitar o MED
-                  (Mecanismo especial de devolução), aconselhamos fazer por meio
-                  do próprio aplicativo.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-x-4">
-              <div className="flex flex-col items-center justify-center w-22 ">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
-                <div className="h-full border-l-2 border-orange-600"></div>
-              </div>
-              <div>
-                <h4 className="mb-2 text-xl font-bold">
-                  2. Fazer um Boletim de ocorrência
-                </h4>
-                <p className="mb-6">
-                  Faça um BO online, você deve adicionar o máximo de informações
-                  sobre o crime ocorrido, como a sua conta bancária, o valor
-                  enviado, a conta que recebeu o valor.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-x-4">
-              <div className="flex flex-col items-center justify-center w-22">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
-                <div className="h-full border-l-2 border-orange-600"></div>
-              </div>
-              <div>
-                <h4 className="mb-2 text-xl font-bold">
-                  3. Coleta de provas da fraude
-                </h4>
-                <p className="mb-6">
-                  Nesse momento iremos produzir provas que comprovem o seu
-                  direito, como prints da fraude, comprovantes das
-                  transferências, protocolos do banco etc.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-x-4">
-              <div className="flex flex-col items-center justify-center w-22">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
-                <div className="h-full border-l-2 border-orange-600"></div>
-              </div>
-              <div>
-                <h4 className="mb-2 text-xl font-bold">4. Petição Inicial</h4>
-                <p className="mb-6">
-                  Essa petição dá início ao processo judicial, nela apresentamos
-                  todos os fatos ocorridos ao juiz juntamente com nossos
-                  pedidos.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-x-4">
-              <div className="flex flex-col items-center justify-center w-22">
-                <div className="w-[20px] h-[24px] rounded-full bg-orange-600"></div>
-                <div className="h-full border-l-2 border-orange-600"></div>
-              </div>
-              <div>
-                <h4 className="mb-2 text-xl font-bold">
-                  5. Audiência de Instrução
-                </h4>
-                <p className="mb-6">
-                  Nessa etapa iremos questionar o banco sobre pontos
-                  importantíssimos para o curso do processo, produzindo provas
-                  em nosso favor.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-x-4">
-              <div className="flex flex-col items-center justify-start w-22">
-                <div className="w-[20px] h-[20px] rounded-full bg-orange-600"></div>
-              </div>
-              <div>
-                <h4 className="mb-2 text-xl font-bold">6. Sentença</h4>
-                <p className="mb-6">
-                  A sentença é onde o juiz vai decidir o que irá acontecer,
-                  existem casos em que além da devolução dos valores perdidos
-                  para os golpistas o banco é condenado a pagar danos morais
-                  pelo transtorno causado.
-                </p>
-              </div>
-            </div>
+            <p className="px-4 py-2 text-white transition-all bg-green-600 hover:text-green-600 hover:bg-white">
+              Fale com um advogado especialista
+            </p>
+          </Link>
+          <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
+          <div className="p-6 space-y-2 text-center text-white bg-orange-500 rounded-2xl lg:w-1/2">
+            <h4 className="text-2xl font-semibold lg:text-4xl">Acordo com o banco</h4>
+            <p className="lg:text-xl">
+              Muitas vezes é possível negociar com o banco durante o processo e
+              fazer um acordo extrajudicial com até 90% de desconto antes do fim
+              do processo
+            </p>
           </div>
         </div>
       </section>
 
       {/* bulletlist */}
       <section className="text-white bg-[#0A2136]">
-        <div className="container p-8 mx-auto space-y-8 md:py-16 ">
-          <h2 className="mb-3 text-2xl font-bold text-center md:text-4xl">
-            Veja os casos que podemos lhe ajudar:
-          </h2>
-          <div
-            id="listas"
-            className="space-y-8 md:flex md:flex-row  md:[&>div]:w-1/2 md:space-y-0 md:space-x-8 md:px-24 lg:px-48 ">
-            <div id="bom">
-              <div className="flex flex-row items-center mb-4 space-x-4">
-                <Image
-                  src="/images/ok.png"
-                  width={40}
-                  height={40}
-                  alt="OK Verde"
-                />
-                <h3 className="text-xl font-bold ">Para quem serve:</h3>
-              </div>
-              <ul className="[&>li]:text-white [&>li]:w-full [&>li]:bg-orange-500 [&>li]:p-4 space-y-4 font-bold">
-                <li>Golpe do Falso Parente</li>
-                <li>
-                  Golpe do Falso Gerente Bancário / Central de Atendimento
-                </li>
-                <li>Golpe do WhatsApp</li>
-                <li>Golpe do Produto ou da Loja Falsa</li>
-                <li>Golpe da Rede Social Hackeada</li>
-                <li>Golpe do Falso Investimento</li>
-              </ul>
+        <div className="container flex flex-col items-center p-8 mx-auto space-y-8 ">
+          <div className="flex flex-col space-y-2 text-center">
+            <h2 className="text-2xl text-center md:text-3xl lg:text-4xl">
+              Veja os casos que podemos lhe ajudar
+            </h2>
+            <h3 className="text-lg lg:text-xl">Dívidas que podemos reduzir</h3>
+          </div>
+
+          <div className="flex flex-col gap-2 md:px-48 lg:w-[54%] md:gap-4  ">
+            <div className="flex flex-row gap-4 font-bold uppercase">
+              <Image
+                src="/images/ok.png"
+                width={32}
+                height={32}
+                alt="Icone de OK Verde"
+                className="w-[32px] h-[32px]"
+              />
+              <p className="text-lg">Revisão de DÍVIDA de cartão de crédito</p>
             </div>
-            <div id="mal">
-              <div className="flex flex-row items-center mb-4 space-x-4">
-                <Image
-                  src="/images/close.png"
-                  width={40}
-                  height={40}
-                  alt="Cruz Vermelha"
-                />
-                <h3 className="text-xl font-bold">Para quem serve:</h3>
-              </div>
-              <ul className="[&>li]:text-white [&>li]:w-full [&>li]:bg-orange-500 [&>li]:p-4 space-y-4 font-bold">
-                <li>Golpe Abaixo de R$ 3.000,00</li>
-                <li>Reaver Pix Realizado sem Existência de Golpe</li>
-              </ul>
+            <div className="flex flex-row gap-4 font-bold uppercase">
+              <Image
+                src="/images/ok.png"
+                width={32}
+                height={32}
+                alt="Icone de OK Verde"
+                className="w-[32px] h-[32px]"
+              />
+              <p className="text-lg">Revisão de DÍVIDA de cheque especial</p>
+            </div>
+            <div className="flex flex-row gap-4 font-bold uppercase">
+              <Image
+                src="/images/ok.png"
+                width={32}
+                height={32}
+                alt="Icone de OK Verde"
+                className="w-[32px] h-[32px]"
+              />
+              <p className="text-lg">
+                Revisão de contrato de empréstimo pessoal
+              </p>
+            </div>
+            <div className="flex flex-row gap-4 font-bold uppercase">
+              <Image
+                src="/images/ok.png"
+                width={32}
+                height={32}
+                alt="Icone de OK Verde"
+                className="w-[32px] h-[32px]"
+              />
+              <p className="text-lg">Revisão de contrato de conta garantida</p>
             </div>
           </div>
         </div>
@@ -371,11 +270,9 @@ export default function Home() {
             }}></div>
 
           <div className="space-y-8 conteudo md:w-1/2">
-            <div>
-              <h2 className="mb-3 text-2xl font-bold md:text-4xl">
-                Quem Somos?
-              </h2>
-              <p>
+            <div className="space-y-2">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl">Quem Somos?</h2>
+              <p className="lg:text-lg">
                 O escritório Kruger Toledo Advocacia é um escritório
                 especializado em direito bancário, comprometido em valorizar seu
                 dinheiro da forma que você merece. Buscamos os melhores ganhos

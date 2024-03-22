@@ -30,7 +30,7 @@ export function EmblaCarousel() {
 
   return (
     <div className="embla">
-      <div className="mb-4 gap-2 flex flex-row justify-center">
+      <div className="flex flex-row justify-center mb-4 gap-2">
         <button
           className="embla__prev hover:bg-slate-100 w-10 h-10 border-[1px] border-slate-200"
           onClick={scrollPrev}>

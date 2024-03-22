@@ -21,7 +21,7 @@ export default function Home() {
           backgroundPosition: "center",
         }}
         className="py-32 md:py-16">
-        <div className="container flex flex-col justify-center  h-full p-8 mx-auto md:py-16 text-white text-center space-y-4">
+        <div className="container flex flex-col justify-center h-full p-8 mx-auto text-center text-white  md:py-16 space-y-4">
           <p className="text-xl">
             Assistência aos superendividados de uma forma integral
           </p>
@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* alvo */}
       <section>
-        <div className="container p-8 mx-auto  lg:w-1/2 py-16">
+        <div className="container p-8 py-16 mx-auto  lg:w-1/2">
           <div className="text-center">
             <p>NOSSO ALVO SÃO AS INSTITUIÇÕES FINANCEIRAS</p>
             <h2 className="mb-8 text-4xl font-bold">
@@ -41,7 +41,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="text-lg">
-            <p className=" mb-4">
+            <p className="mb-4 ">
               O escritório Krüger Toledo Advocacia, atua ajudando servidores
               públicos a superar o superendividamento. Com nossa ampla
               experiência no atendimento a inúmeros clientes e no gerenciamento
@@ -49,7 +49,7 @@ export default function Home() {
               estratégias jurídicas altamente eficazes para ajudar a
               reequilibrar suas finanças pessoais de maneira efetiva.
             </p>
-            <p className=" mb-4">
+            <p className="mb-4 ">
               Nosso escritório é administrado pela sócia-líder Esther Krüger,
               formada pela PUC/RS, que já trabalhou em empresas multinacionais e
               em uma das quatro maiores empresas de auditoria e contabilidade do
