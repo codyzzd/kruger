@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -31,14 +30,13 @@ export default function Home() {
           <div className="flex flex-col items-center space-y-8 text-center">
             <div className="flex flex-col items-center space-y-4">
               <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-full lg:text-5xl ss4">
-                Reduza suas dívidas com a ajuda de um advogado especialista em
-                direito bancário
+                Com a ajuda de um advogado bancário é possível reduzir suas
+                dívidas
               </h1>
               <h2 className="text-lg md:px-20 lg:text-xl lg:px-48">
-                Com a ajuda de um advogado especialista é possível renegociar e
-                reduzir suas dívidas.
+                Tentar renegociar seus contratos com o gerente não vai resolver
+                seu problema
               </h2>
-
             </div>
             <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
             <Link
@@ -82,7 +80,7 @@ export default function Home() {
       <section className="text-white bg-[#0A2136]">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
           <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
-            Veja mais sobre como podemos te ajudar:
+            Saiba mais sobre como a ação revisional
           </h2>
           {/* <iframe
             src="https://www.youtube.com/embed/HxLWk3tSgaA?rel=0&modestbranding=1"
@@ -123,58 +121,53 @@ export default function Home() {
         <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
           <div className="flex flex-col space-y-2 text-center">
             <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
-              Ajudaremos você do início ao fim do processo!
+              Passo a passo para revisar seus contratos
             </h2>
-            <h3 className="text-lg lg:text-xl">Quais serão as etapas?</h3>
+            <h3 className="text-lg lg:text-xl">
+              E como funciona a Ação revisional?
+            </h3>
           </div>
-          <div className="grid grid-cols-1 grid-rows-[min-content,min-content,min-content,min-content,min-content] lg:grid-cols-3 lg:grid-rows-2 [&>div]:p-6 [&>div]:border-[1px] [&>div]:border-orange-500 [&>div]:rounded-2xl [&>div]:space-y-2  [&_h4]:text-xl [&_h4]:font-bold gap-6 ">
-            <div className="">
-              <h4>1. Coleta de documentos</h4>
+          <div className="flex flex-col md:flex-wrap md:flex-row md:justify-center [&>div]:p-6 [&>div]:border-[1px] [&>div]:border-orange-500 [&>div]:rounded-2xl [&>div]:space-y-2  [&_h4]:text-xl [&_h4]:font-bold gap-6 ">
+          {/* <div className="grid grid-cols-1 grid-rows-[min-content,min-content,min-content,min-content,min-content] lg:grid-cols-3 lg:grid-rows-2 [&>div]:p-6 [&>div]:border-[1px] [&>div]:border-orange-500 [&>div]:rounded-2xl [&>div]:space-y-2  [&_h4]:text-xl [&_h4]:font-bold gap-6 "> */}
+            <div className="md:w-[30%]">
+              <h4>1. Relato pessoal</h4>
               <p>
-                Nesse momento iremos coletar todos documentos pertinentes para o
-                seu caso, como os contratos, detalhamento de evolução de
-                dívidas, etc…
+                Ao entrar em contato com o advogado especialista, é necessário
+                explicar como iniciaram as dívidas e os desdobramentos ocorridos
+                até a situação atual.
               </p>
             </div>
-            <div>
+            <div className="md:w-[30%]">
               <h4>2. Análise documental</h4>
               <p>
-                Nessa etapa, nossos especialistas irão verificar as minúcias dos
-                seus contratos, buscando e identificando irregularidades e
-                abusividades.
+                É necessário avaliar cuidadosamente os contratos em busca de
+                irregularidades ou práticas abusivas, através de profissionais
+                especializados no assunto.
               </p>
             </div>
-            <div>
+            <div className="md:w-[30%]">
               <h4>3. Elaboração de petição inicial</h4>
               <p>
-                Após identificarmos as irregularidades, será elaborada petição
-                inicial da sua ação apontando as irregularidades e apresentando
-                os cálculos para demonstrar o valor justo a ser pago.
+                A petição inicial é onde todos os argumentos e razões pelas
+                quais os contratos devem ter suas condições alteradas.
               </p>
             </div>
-            <div>
-              <h4>4. Protocolo da petição inicial</h4>
+            <div className="md:w-[40%] lg:w-[30%]">
+              <h4>4. Fase judicial</h4>
               <p>
-                Nesse documento constam todos os fatos ocorridos juntamente com
-                os pedidos que devem ser analisados pelo o juiz.
+                Durante o processo os integrantes apresentam suas alegações e as
+                informações necessárias para o julgamento ocorrer.
               </p>
             </div>
-            <div>
-              <h4>5. Apresentação de documentos e alegações das partes</h4>
-              <p>
-                Nessa etapa os integrantes do processo apresentam as
-                documentações relevantes e o juiz pode solicitar mais
-                informações.
-              </p>
-            </div>
-            <div>
-              <h4>6. Sentença</h4>
+            <div className="md:w-[40%] lg:w-[30%]">
+              <h4>5. Sentença</h4>
               <p>
                 Na sentença é onde o juiz vai decidir qual será o valor final da
                 dívida com base em todas informações apresentadas durante o
                 processo.
               </p>
             </div>
+
           </div>
           <Link
             href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
@@ -193,7 +186,9 @@ export default function Home() {
           </Link>
           <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
           <div className="p-6 space-y-2 text-center text-white bg-orange-500 rounded-2xl lg:w-1/2">
-            <h4 className="text-2xl font-semibold lg:text-4xl ss4">Acordo com o banco</h4>
+            <h4 className="text-2xl font-semibold lg:text-4xl ss4">
+              Acordo com o banco
+            </h4>
             <p className="lg:text-xl">
               Muitas vezes é possível negociar com o banco durante o processo e
               fazer um acordo extrajudicial com até 90% de desconto antes do fim
@@ -273,7 +268,9 @@ export default function Home() {
 
           <div className="space-y-8 conteudo md:w-1/2">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl ss4">Quem Somos?</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl ss4">
+                Quem Somos?
+              </h2>
               <p className="lg:text-lg">
                 O escritório Kruger Toledo Advocacia é um escritório
                 especializado em direito bancário, comprometido em valorizar seu
