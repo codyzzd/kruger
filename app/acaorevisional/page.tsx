@@ -29,7 +29,7 @@ export default function Home() {
           />
           <div className="flex flex-col items-center space-y-8 text-center">
             <div className="flex flex-col items-center space-y-4">
-              <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-full lg:text-5xl ss4">
+              <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-[80%] lg:text-5xl ss4">
                 Com a ajuda de um advogado bancário é possível reduzir suas
                 dívidas
               </h1>
@@ -95,7 +95,7 @@ export default function Home() {
             controls
             preload="auto"
             className="md:w-3/4">
-            <source src="/videos/golpedopix2.mp4" type="video/mp4" />
+            <source src="/videos/acaorevisional.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <Link
