@@ -80,7 +80,7 @@ export default function Home() {
       <section className="text-white bg-[#0A2136]">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
           <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
-            Saiba mais sobre como a ação revisional
+            Saiba mais sobre a ação revisional
           </h2>
           {/* <iframe
             src="https://www.youtube.com/embed/HxLWk3tSgaA?rel=0&modestbranding=1"
