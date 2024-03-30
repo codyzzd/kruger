@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <Script
-          id="facebook-pixel"
+          id="facebook-pixel" strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `<!-- Meta Pixel Code -->
           <script>
