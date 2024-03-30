@@ -40,7 +40,7 @@ export default function Home() {
             </div>
             <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
             <Link
-              href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
+              href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
               className="flex flex-row space-x-4">
               <Image
                 src="/images/whatsapp.png"
@@ -99,7 +99,7 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
           <Link
-            href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
+            href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">
             <Image
               src="/images/whatsapp.png"
@@ -170,7 +170,7 @@ export default function Home() {
 
           </div>
           <Link
-            href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
+            href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">
             <Image
               src="/images/whatsapp.png"
@@ -325,7 +325,7 @@ export default function Home() {
             </div>
             <div className="flex flex-row justify-center md:justify-start">
               <Link
-                href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
+                href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
                 className="flex flex-row space-x-4">
                 <Image
                   src="/images/whatsapp.png"
@@ -704,7 +704,7 @@ export default function Home() {
             </div>
           </div>
           <Link
-            href="https://wa.me/+556181401978/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
+            href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
             className="flex flex-row space-x-4 ">
             <Image
               src="/images/whatsapp.png"
