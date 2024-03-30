@@ -2,7 +2,6 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Montserrat, Source_Serif_4 } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const sourceserif = Source_Serif_4({
@@ -37,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
+      {/* <head>
         <Script
           id="facebook-pixel" strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -60,7 +59,7 @@ export default function RootLayout({
           <!-- End Meta Pixel Code -->`,
           }}
         />
-      </head>
+      </head> */}
       <body className={`${sourceserif.variable} ${montserrat.variable}`}>
         <SpeedInsights />
         {children}

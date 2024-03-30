@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Golpe do Pix",
@@ -11,6 +12,31 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <head>
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `<!-- Meta Pixel Code -->
+          <script>
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1407133203501280');
+          fbq('track', 'PageView');
+          </script>
+          <noscript><img height="1" width="1" style="display:none"
+          src="https://www.facebook.com/tr?id=1407133203501280&ev=PageView&noscript=1"
+          /></noscript>
+          <!-- End Meta Pixel Code -->`,
+          }}
+        />
+      </head>
       {/* hero */}
       <section
         className="text-white "
@@ -128,7 +154,7 @@ export default function Home() {
             </h3>
           </div>
           <div className="flex flex-col md:flex-wrap md:flex-row md:justify-center [&>div]:p-6 [&>div]:border-[1px] [&>div]:border-orange-500 [&>div]:rounded-2xl [&>div]:space-y-2  [&_h4]:text-xl [&_h4]:font-bold gap-6 ">
-          {/* <div className="grid grid-cols-1 grid-rows-[min-content,min-content,min-content,min-content,min-content] lg:grid-cols-3 lg:grid-rows-2 [&>div]:p-6 [&>div]:border-[1px] [&>div]:border-orange-500 [&>div]:rounded-2xl [&>div]:space-y-2  [&_h4]:text-xl [&_h4]:font-bold gap-6 "> */}
+            {/* <div className="grid grid-cols-1 grid-rows-[min-content,min-content,min-content,min-content,min-content] lg:grid-cols-3 lg:grid-rows-2 [&>div]:p-6 [&>div]:border-[1px] [&>div]:border-orange-500 [&>div]:rounded-2xl [&>div]:space-y-2  [&_h4]:text-xl [&_h4]:font-bold gap-6 "> */}
             <div className="md:w-[30%]">
               <h4>1. Relato pessoal</h4>
               <p>
@@ -167,7 +193,6 @@ export default function Home() {
                 processo.
               </p>
             </div>
-
           </div>
           <Link
             href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
