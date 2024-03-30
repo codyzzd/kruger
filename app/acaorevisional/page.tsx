@@ -4,9 +4,9 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Golpe do Pix",
+  title: "Ação Revisional",
   description:
-    "Krüger Advocacia: Recupere seu dinheiro perdido no golpe do Pix com a ajuda de nossos advogados especializados em direito bancário. Oferecemos assistência desde a coleta de provas até a obtenção da sentença favorável. Fale agora com um advogado e veja como podemos ajudar você a reaver seus valores. Conte com a nossa experiência e compromisso. Todos os direitos reservados.",
+    "Com a ajuda de um advogado bancário, reduza suas dívidas e resolva seus problemas financeiros. Saiba mais sobre a ação revisional e como ela funciona. Entre em contato agora mesmo para obter assistência especializada!",
 };
 
 export default function Home() {
