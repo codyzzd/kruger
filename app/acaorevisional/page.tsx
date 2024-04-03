@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-       <head>
+
         <GoogleTagManager gtmId="GTM-MXFVWCBW" />
         <Suspense fallback={null}>
           <FacebookPixelEvents />
         </Suspense>
-      </head>
+      
 
       {/* hero */}
       <section
