@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { FacebookPixelEvents } from "../components/pixel";
 
+
 export const metadata: Metadata = {
   title: "Ação Revisional",
   description:
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <head>
+       <head>
         <GoogleTagManager gtmId="GTM-MXFVWCBW" />
         <Suspense fallback={null}>
           <FacebookPixelEvents />
