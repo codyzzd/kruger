@@ -100,10 +100,11 @@ export default function Home() {
           /> */}
 
           <video
+          poster="/videos/acaorevisional_thumb.avif"
             width="320"
             height="240"
             controls
-            preload="auto"
+            preload="none"
             className="md:w-3/4">
             <source src="/videos/acaorevisional.mp4" type="video/mp4" />
             Your browser does not support the video tag.
