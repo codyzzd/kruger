@@ -20,7 +20,7 @@ export default function Home() {
         <Suspense fallback={null}>
           <FacebookPixelEvents />
         </Suspense>
-      
+
 
       {/* hero */}
       <section
@@ -91,7 +91,7 @@ export default function Home() {
       <section className="text-white bg-[#0A2136]">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
           <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
-            Saiba mais sobre a ação revisional
+          Assista o vídeo para descobrir como é possível reduzir em até 90% da sua dívida
           </h2>
           {/* <iframe
             src="https://www.youtube.com/embed/HxLWk3tSgaA?rel=0&modestbranding=1"
