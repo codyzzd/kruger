@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <>
 
-      <GoogleTagManager gtmId="GTM-MXFVWCBW" />
-      <Suspense fallback={null}>
-        <FacebookPixelEvents />
-      </Suspense>
+        <GoogleTagManager gtmId="GTM-MXFVWCBW" />
+        <Suspense fallback={null}>
+          <FacebookPixelEvents />
+        </Suspense>
 
 
       {/* hero */}
@@ -34,44 +34,35 @@ export default function Home() {
           <Image
             className=""
             src="/images/logokruger.png"
-            width={140}
-            height={35}
+            width={150}
+            height={40}
             alt="Logo Kruger Advocacia"
           />
           <div className="flex flex-col items-center space-y-8 text-center">
             <div className="flex flex-col items-center space-y-4">
               <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-[80%] lg:text-5xl ss4">
-                Descubra como reduzir em até 90% das suas dívidas
+                Com a ajuda de um advogado bancário é possível reduzir suas
+                dívidas
               </h1>
               <h2 className="text-lg md:px-20 lg:text-xl lg:px-48">
-                Assista o pequeno vídeo abaixo e pare de queimar o seu dinheiro com o banco
-              </h2>
-              <h2 className="text-lg md:px-20 lg:text-xl lg:px-48">
-                Conte com um advogado especialista em bancário para defender os seus direitos
+                Tentar renegociar seus contratos com o gerente não vai resolver
+                seu problema
               </h2>
             </div>
             <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
-            <video
-              poster="/videos/acaorevisional_thumb.avif"
-              width="320"
-              height="240"
-              controls
-              preload="none"
-              className="md:w-3/4 rounded">
-              <source src="/videos/acaorevisional.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
             <Link
               href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
-              className="flex flex-row space-x-4 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded">
+              className="flex flex-row space-x-4">
               <Image
-                src="/images/wpp.png"
-                width={24}
-                height={24}
+                src="/images/whatsapp.png"
+                width={40}
+                height={40}
                 alt="Whatsapp Icon"
                 className=" max-h-[40px] max-w-[40px]"
               />
-              <span>Fale agora com um advogado</span>
+              <p className="px-4 py-2 text-white transition-all bg-green-600 hover:text-green-600 hover:bg-white">
+                Fale agora com um advogado
+              </p>
             </Link>
           </div>
 
@@ -96,13 +87,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* video */}
+      <section className="text-white bg-[#0A2136]">
+        <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
+          <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
+          Assista o vídeo para descobrir como é possível reduzir em até 90% da sua dívida
+          </h2>
+          {/* <iframe
+            src="https://www.youtube.com/embed/HxLWk3tSgaA?rel=0&modestbranding=1"
+            frameBorder="0"
+            allowFullScreen
+            className="aspect-video w-full h-[190px] md:h-[400px] lg:w-[700px]"
+          /> */}
+
+          <video
+          poster="/videos/acaorevisional_thumb.avif"
+            width="320"
+            height="240"
+            controls
+            preload="none"
+            className="md:w-3/4">
+            <source src="/videos/acaorevisional.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <Link
+            href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
+            className="flex flex-row space-x-4 ">
+            <Image
+              src="/images/whatsapp.png"
+              width={40}
+              height={40}
+              alt="Whatsapp Icon"
+              className=" max-h-[40px] max-w-[40px]"
+            />
+
+            <p className="px-4 py-2 text-white transition-all bg-green-600 hover:text-green-600 hover:bg-white">
+              Fale com um advogado
+            </p>
+          </Link>
+        </div>
+      </section>
+
       {/* etapas */}
       <section className="text-white bg-[#022442] ">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
           <div className="flex flex-col space-y-2 text-center">
             <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
-              Veja o passa a passo simples de como revisar os seus contratos!
+              Passo a passo para revisar seus contratos
             </h2>
+            <h3 className="text-lg lg:text-xl">
+              E como funciona a Ação revisional?
+            </h3>
           </div>
           <div className="flex flex-col md:flex-wrap md:flex-row md:justify-center [&>div]:p-6 [&>div]:border-[1px] [&>div]:border-orange-500 [&>div]:rounded-2xl [&>div]:space-y-2  [&_h4]:text-xl [&_h4]:font-bold gap-6 ">
             {/* <div className="grid grid-cols-1 grid-rows-[min-content,min-content,min-content,min-content,min-content] lg:grid-cols-3 lg:grid-rows-2 [&>div]:p-6 [&>div]:border-[1px] [&>div]:border-orange-500 [&>div]:rounded-2xl [&>div]:space-y-2  [&_h4]:text-xl [&_h4]:font-bold gap-6 "> */}
@@ -147,15 +182,18 @@ export default function Home() {
           </div>
           <Link
             href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
-            className="flex flex-row space-x-4 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded">
+            className="flex flex-row space-x-4 ">
             <Image
-              src="/images/wpp.png"
-              width={24}
-              height={24}
+              src="/images/whatsapp.png"
+              width={40}
+              height={40}
               alt="Whatsapp Icon"
               className=" max-h-[40px] max-w-[40px]"
             />
-            <span>Fale agora com um advogado</span>
+
+            <p className="px-4 py-2 text-white transition-all bg-green-600 hover:text-green-600 hover:bg-white">
+              Fale com um advogado especialista
+            </p>
           </Link>
           <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
           <div className="p-6 space-y-2 text-center text-white bg-orange-500 rounded-2xl lg:w-1/2">
@@ -299,39 +337,19 @@ export default function Home() {
             <div className="flex flex-row justify-center md:justify-start">
               <Link
                 href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
-                className="flex flex-row space-x-4 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded">
+                className="flex flex-row space-x-4">
                 <Image
-                  src="/images/wpp.png"
-                  width={24}
-                  height={24}
-                  alt="Whatsapp Icon"
+                  src="/images/whatsapp.png"
+                  width={40}
+                  height={40}
+                  alt="Icone de Usuário"
                   className=" max-h-[40px] max-w-[40px]"
                 />
-                <span>Fale agora com um advogado</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="text-white bg-[#0A2136]">
-        <div className="container flex flex-col items-center p-8 mx-auto space-y-8 ">
-          <div className="flex flex-col space-y-12 text-center">
-            <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
-              Atendimento via What'sApp humanizado e rápido!
-            </h2>
-            <div className="flex justify-center rounded">
-              <Image
-                src="/images/img_wpp.png"
-                alt="Imagem de pessoa com cerca de 50 anos utilizando whatsapp no celular"
-                width={512}
-                height={512}
-                className="rounded"
-              />
-            </div>
-            <div className="w-full max-w-3xl">
-              <h3 className="text-lg lg:text-xl">Nosso atendimento é rápido, com empatia e resolutivo. <strong>Você nunca ficará sem respostas e atualizações</strong> sobre o seu processo. É como ter <strong>um advogado disponível na palma da mão</strong>. </h3>
-              <h3 className="text-lg lg:text-xl">Apesar de dependermos do judiciário para o seu processo evoluir, <strong>sempre estaremos a disposição para tirar as suas dúvidas e priorizar o seu processo</strong></h3>
+                <p className="px-4 py-2 text-white transition-all bg-green-600 hover:text-green-600 hover:bg-white">
+                  Conte com a nossa ajuda!
+                </p>
+              </Link>
             </div>
           </div>
         </div>
@@ -698,15 +716,18 @@ export default function Home() {
           </div>
           <Link
             href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
-            className="flex flex-row space-x-4 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded">
+            className="flex flex-row space-x-4 ">
             <Image
-              src="/images/wpp.png"
-              width={24}
-              height={24}
-              alt="Whatsapp Icon"
+              src="/images/whatsapp.png"
+              width={40}
+              height={40}
+              alt="Icone de Usuário"
               className=" max-h-[40px] max-w-[40px]"
             />
-            <span>Fale agora com um advogado</span>
+
+            <p className="px-4 py-2 text-white transition-all bg-green-600 hover:text-green-600 hover:bg-white">
+              Fale agora com um advogado
+            </p>
           </Link>
         </div>
       </section>
