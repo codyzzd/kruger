@@ -41,10 +41,10 @@ export default function Home() {
           <div className="flex flex-col items-center space-y-4 sm:space-y-8 text-center">
             <div className="flex flex-col items-center py-2 sm:space-y-4">
               <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-[80%] lg:text-5xl ss4">
-                Descubra como reduzir em até 90% das suas dívidas
+                Descubra como é possível reduzir em até 90% das suas dívidas
               </h1>
               <h2 className="text-lg md:px-20 lg:text-xl lg:px-48">
-                Assista o pequeno vídeo abaixo e pare de queimar o seu dinheiro com o banco
+                O pequeno vídeo abaixo revela como parar de pagar juros indevidos
               </h2>
               <h2 className="text-lg md:px-20 lg:text-xl lg:px-48">
                 Conte com um advogado especialista em bancário para defender os seus direitos
