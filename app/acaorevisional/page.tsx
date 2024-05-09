@@ -317,10 +317,16 @@ export default function Home() {
 
       <section className="text-white bg-[#0A2136]">
         <div className="container flex flex-col items-center p-8 mx-auto space-y-8 ">
-          <div className="flex flex-col space-y-12 text-center">
-            <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
-              Atendimento via WhatsApp humanizado e rápido!
-            </h2>
+          <div className="sm:grid sm:grid-cols-2 max-w-6xl items-center flex flex-col space-y-12">
+            <div className="text-left flex flex-col gap-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl ss4">
+                Atendimento via WhatsApp humanizado e rápido!
+              </h2>
+              <div className="w-full max-w-3xl">
+                <h3 className="text-lg lg:text-xl">Nosso atendimento é rápido, com empatia e resolutivo. <strong>Você nunca ficará sem respostas e atualizações</strong> sobre o seu processo. É como ter <strong>um advogado disponível na palma da mão</strong>. </h3>
+                <h3 className="text-lg lg:text-xl">Apesar de dependermos do judiciário para o seu processo evoluir, <strong>sempre estaremos a disposição para tirar as suas dúvidas e priorizar o seu processo</strong></h3>
+              </div>
+            </div>
             <div className="flex justify-center rounded">
               <Image
                 src="/images/img_wpp.png"
@@ -329,10 +335,6 @@ export default function Home() {
                 height={512}
                 className="rounded"
               />
-            </div>
-            <div className="w-full max-w-3xl">
-              <h3 className="text-lg lg:text-xl">Nosso atendimento é rápido, com empatia e resolutivo. <strong>Você nunca ficará sem respostas e atualizações</strong> sobre o seu processo. É como ter <strong>um advogado disponível na palma da mão</strong>. </h3>
-              <h3 className="text-lg lg:text-xl">Apesar de dependermos do judiciário para o seu processo evoluir, <strong>sempre estaremos a disposição para tirar as suas dúvidas e priorizar o seu processo</strong></h3>
             </div>
           </div>
         </div>
