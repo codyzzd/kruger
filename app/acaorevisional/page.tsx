@@ -30,7 +30,7 @@ export default function Home() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
-        <div className="container flex flex-col items-center justify-center p-8 py-16 mx-auto space-y-16 ">
+        <div className="container flex flex-col items-center justify-center p-8 py-8 sm:py-16 mx-auto space-y-6 sm:space-y-16 ">
           <Image
             className=""
             src="/images/logokruger.png"
@@ -38,8 +38,8 @@ export default function Home() {
             height={35}
             alt="Logo Kruger Advocacia"
           />
-          <div className="flex flex-col items-center space-y-8 text-center">
-            <div className="flex flex-col items-center space-y-4">
+          <div className="flex flex-col items-center space-y-4 sm:space-y-8 text-center">
+            <div className="flex flex-col items-center py-2 sm:space-y-4">
               <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-[80%] lg:text-5xl ss4">
                 Descubra como reduzir em até 90% das suas dívidas
               </h1>
@@ -51,7 +51,8 @@ export default function Home() {
               </h2>
             </div>
             <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
-            <video
+            <iframe className="md:w-3/4 md:h-[524px] w-full h-56 rounded" src="https://www.youtube.com/embed/e6oAhGLwRK0?si=YXNKu_t8uPNgDkCJ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            {/* <video
               poster="/videos/acaorevisional_thumb.avif"
               width="320"
               height="240"
@@ -60,7 +61,7 @@ export default function Home() {
               className="md:w-3/4 rounded">
               <source src="/videos/acaorevisional.mp4" type="video/mp4" />
               Your browser does not support the video tag.
-            </video>
+            </video> */}
             <Link
               href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
               className="flex flex-row space-x-4 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded">
