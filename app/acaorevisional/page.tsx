@@ -319,7 +319,7 @@ export default function Home() {
         <div className="container flex flex-col items-center p-8 mx-auto space-y-8 ">
           <div className="flex flex-col space-y-12 text-center">
             <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">
-              Atendimento via What'sApp humanizado e rápido!
+              Atendimento via WhatsApp humanizado e rápido!
             </h2>
             <div className="flex justify-center rounded">
               <Image
