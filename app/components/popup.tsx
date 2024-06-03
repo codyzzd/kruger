@@ -59,7 +59,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
             } else if (value.length === 11) {
                 value = `${value}-`
             }
-        } 
+        }
 
         return value
     }
@@ -128,12 +128,14 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                         />
                         <span>Falar com advogado especialista</span>
                     </button>
+                    <div>
+                        <input type="hidden" id="utm_term" value={utm_term || 'AQUI'} name="utm_term" placeholder="utm_term" />
+                        <input type="hidden" id="utm_medium" value={utm_medium || 'AQUI'} name="utm_medium" placeholder="utm_medium" />
+                        <input type="hidden" id="utm_content" value={utm_content || 'AQUI'} name="utm_content" placeholder="utm_content" />
+                        <input type="hidden" id="utm_campaign" value={utm_campaign || 'AQUI'} name="utm_campaign" placeholder="utm_campaign" />
+                        <input type="hidden" id="utm_source" value={utm_source || 'AQUI'} name="utm_source" placeholder="utm_source" />
+                    </div>
                 </div>
-                <input type="hidden" id="utm_term" value={utm_term || 'AQUI'} name="utm_term" placeholder="utm_term" />
-                <input type="hidden" id="utm_medium" value={utm_medium || 'AQUI'} name="utm_medium" placeholder="utm_medium" />
-                <input type="hidden" id="utm_content" value={utm_content || 'AQUI'} name="utm_content" placeholder="utm_content" />
-                <input type="hidden" id="utm_campaign" value={utm_campaign || 'AQUI'} name="utm_campaign" placeholder="utm_campaign" />
-                <input type="hidden" id="utm_source" value={utm_source || 'AQUI'} name="utm_source" placeholder="utm_source" />
             </form>
         </div>
     )
