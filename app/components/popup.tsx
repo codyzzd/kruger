@@ -75,11 +75,11 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
     console.log(params.get('utm_campaign'))
     async function formSubmited(e: FormEvent) {
         let dataHlp = data
-        dataHlp['utm_campaign'] = params.get('utm_campaign') || ''
-        dataHlp['utm_content'] = params.get('utm_content') || ''
-        dataHlp['utm_medium'] = params.get('utm_medium') || ''
-        dataHlp['utm_source'] = params.get('utm_source') || ''
-        dataHlp['utm_term'] = params.get('utm_term') || ''
+        dataHlp['utm_campaign'] = params.get('utm_campaign') || 'AQUI'
+        dataHlp['utm_content'] = params.get('utm_content') || 'AQUI'
+        dataHlp['utm_medium'] = params.get('utm_medium') || 'AQUI'
+        dataHlp['utm_source'] = params.get('utm_source') || 'AQUI'
+        dataHlp['utm_term'] = params.get('utm_term') || 'AQUI'
         setData(dataHlp)
         e.preventDefault()
         await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com", {
