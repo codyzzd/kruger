@@ -3,7 +3,7 @@
 import { FormEvent, useContext, useEffect, useState } from "react"
 import { PopupContext } from "./context/popup"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 
 interface PopupProps {
     utm_term: string
@@ -37,6 +37,7 @@ let initialData = {
 export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_term }: PopupProps) {
     const { isActive, setIsActive } = useContext(PopupContext)
     const router = useRouter()
+    const params = useSearchParams()
     const [data, setData] = useState<dataProps>(initialData)
 
     function handleChange(type: keyof dataProps, value: string) {
@@ -71,13 +72,14 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
         }
     }, [isActive])
 
+    console.log(params.get('utm_campaign'))
     async function formSubmited(e: FormEvent) {
         let dataHlp = data
-        dataHlp['utm_campaign'] = utm_campaign || ''
-        dataHlp['utm_content'] = utm_content || ''
-        dataHlp['utm_medium'] = utm_medium || ''
-        dataHlp['utm_source'] = utm_source || ''
-        dataHlp['utm_term'] = utm_term || ''
+        dataHlp['utm_campaign'] = params.get('utm_campaign') || ''
+        dataHlp['utm_content'] = params.get('utm_content') || ''
+        dataHlp['utm_medium'] = params.get('utm_medium') || ''
+        dataHlp['utm_source'] = params.get('utm_source') || ''
+        dataHlp['utm_term'] = params.get('utm_term') || ''
         e.preventDefault()
         await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com", {
             method: "POST",
