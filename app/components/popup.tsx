@@ -36,8 +36,8 @@ let initialData = {
 
 export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_term }: PopupProps) {
     const { isActive, setIsActive } = useContext(PopupContext)
-    const router = useRouter()
-    const params = useSearchParams()
+    // const router = useRouter()
+    // const params = useSearchParams()
     const [data, setData] = useState<dataProps>(initialData)
 
     function handleChange(type: keyof dataProps, value: string) {
