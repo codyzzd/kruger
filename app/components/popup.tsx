@@ -108,7 +108,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                 </button>
 
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-xl font-bold">Preencha os campos abaixo</h2>
+                    <h2 className="text-xl font-bold">Preencha os campos abaixo.</h2>
                     <div className="flex flex-col gap-1">
                         <input onChange={(e) => handleChange('name', e.target.value)} value={data.name} className="outline-none border rounded py-2 px-4" type="text" id="name" name="name" placeholder="Insira seu nome" min={2} required />
                     </div>
