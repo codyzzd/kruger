@@ -75,11 +75,11 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
         e.preventDefault()
         let dataHlp = data
 
-        dataHlp['utm_campaign'] = window.location.href.split('?')[1].split("&")[0].split("=")[1] || 'AQUI'
-        dataHlp['utm_content'] = window.location.href.split('?')[1].split("&")[1].split("=")[1] || 'AQUI'
-        dataHlp['utm_medium'] = window.location.href.split('?')[1].split("&")[1].split("=")[1] || 'AQUI'
-        dataHlp['utm_source'] = window.location.href.split('?')[1].split("&")[2].split("=")[1] || 'AQUI'
-        dataHlp['utm_term'] = window.location.href.split('?')[1].split("&")[3].split("=")[1] || 'AQUI'
+        dataHlp['utm_campaign'] = window.location.href.split('?')[1]?.split("&")[0]?.split("=")[1] || 'AQUI'
+        dataHlp['utm_content'] = window.location.href.split('?')[1]?.split("&")[1]?.split("=")[1] || 'AQUI'
+        dataHlp['utm_medium'] = window.location.href.split('?')[1]?.split("&")[1]?.split("=")[1] || 'AQUI'
+        dataHlp['utm_source'] = window.location.href.split('?')[1]?.split("&")[2]?.split("=")[1] || 'AQUI'
+        dataHlp['utm_term'] = window.location.href.split('?')[1]?.split("&")[3]?.split("=")[1] || 'AQUI'
         setData(dataHlp)
         e.preventDefault()
         await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com", {
