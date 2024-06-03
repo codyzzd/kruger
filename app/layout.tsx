@@ -3,6 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Montserrat, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
+import { PopupProvider } from "./components/context/popup";
 
 const sourceserif = Source_Serif_4({
   subsets: ["latin"],
@@ -60,7 +61,9 @@ export default function RootLayout({
           height="0" width="0"></iframe></noscript>
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLM24BX"
           height="0" width="0"></iframe></noscript>
-        {children}
+        <PopupProvider>
+          {children}
+        </PopupProvider>
         <Analytics />
       </body>
     </html>

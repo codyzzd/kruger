@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Popup } from "../components/popup";
 
 export const metadata: Metadata = {
   title: "Ação Cautelar",

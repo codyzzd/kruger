@@ -1,9 +1,10 @@
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Suspense } from "react";
 import { FacebookPixelEvents } from "../components/pixel";
+import { Popup } from "../components/popup";
+import { ModalButton } from "../components/modal-button";
 
 
 export const metadata: Metadata = {
@@ -12,7 +13,17 @@ export const metadata: Metadata = {
     "Com a ajuda de um advogado bancário, reduza suas dívidas e resolva seus problemas financeiros. Saiba mais sobre a ação revisional e como ela funciona. Entre em contato agora mesmo para obter assistência especializada!",
 };
 
-export default function Home() {
+interface AcaoRevisionalProps {
+  searchParams: {
+    utm_term: string
+    utm_medium: string
+    utm_content: string
+    utm_campaign: string
+    utm_source: string
+  }
+}
+
+export default function Home({ searchParams }: AcaoRevisionalProps) {
   return (
     <>
 
@@ -62,18 +73,7 @@ export default function Home() {
               <source src="/videos/acaorevisional.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video> */}
-            <Link
-              href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
-              className="flex flex-row space-x-4 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded">
-              <Image
-                src="/images/wpp.png"
-                width={24}
-                height={24}
-                alt="Whatsapp Icon"
-                className=" max-h-[40px] max-w-[40px]"
-              />
-              <span>Fale agora com um advogado</span>
-            </Link>
+            <ModalButton />
           </div>
 
           {/* <div
@@ -146,18 +146,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <Link
-            href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
-            className="flex flex-row space-x-4 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded">
-            <Image
-              src="/images/wpp.png"
-              width={24}
-              height={24}
-              alt="Whatsapp Icon"
-              className=" max-h-[40px] max-w-[40px]"
-            />
-            <span>Fale agora com um advogado</span>
-          </Link>
+          <ModalButton />
           <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
           <div className="p-6 space-y-2 text-center text-white bg-orange-500 rounded-2xl lg:w-1/2">
             <h4 className="text-2xl font-semibold lg:text-4xl ss4">
@@ -298,18 +287,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-row justify-center md:justify-start">
-              <Link
-                href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
-                className="flex flex-row space-x-4 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded">
-                <Image
-                  src="/images/wpp.png"
-                  width={24}
-                  height={24}
-                  alt="Whatsapp Icon"
-                  className=" max-h-[40px] max-w-[40px]"
-                />
-                <span>Fale agora com um advogado</span>
-              </Link>
+              <ModalButton />
             </div>
           </div>
         </div>
@@ -606,7 +584,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-4 [&>div]:bg-[#142157] hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-4 [&>div]:bg-[#142157]">
             <div className="p-4">
               <Image
                 src="/images/googlelogo.webp"
@@ -699,20 +677,11 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <Link
-            href="https://wa.me/+5551997570244/?text=Ol%C3%A1!%20Quero%20falar%20com%20um%20especialista%20em%20direito%20banc%C3%A1rio"
-            className="flex flex-row space-x-4 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded">
-            <Image
-              src="/images/wpp.png"
-              width={24}
-              height={24}
-              alt="Whatsapp Icon"
-              className=" max-h-[40px] max-w-[40px]"
-            />
-            <span>Fale agora com um advogado</span>
-          </Link>
+          <ModalButton />
         </div>
       </section>
+
+      <Popup {...searchParams} />
     </>
   );
 }
