@@ -129,11 +129,11 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                         <span>Falar com advogado especialista</span>
                     </button>
                 </div>
-                <input className="hidden" type="text" id="utm_term" value={utm_term || ''} name="utm_term" placeholder="utm_term" />
-                <input className="hidden" type="text" id="utm_medium" value={utm_medium || ''} name="utm_medium" placeholder="utm_medium" />
-                <input className="hidden" type="text" id="utm_content" value={utm_content || ''} name="utm_content" placeholder="utm_content" />
-                <input className="hidden" type="text" id="utm_campaign" value={utm_campaign || ''} name="utm_campaign" placeholder="utm_campaign" />
-                <input className="hidden" type="text" id="utm_source" value={utm_source || ''} name="utm_source" placeholder="utm_source" />
+                <input className="hidden" type="text" id="utm_term" value={utm_term || 'AQUI'} name="utm_term" placeholder="utm_term" />
+                <input className="hidden" type="text" id="utm_medium" value={utm_medium || 'AQUI'} name="utm_medium" placeholder="utm_medium" />
+                <input className="hidden" type="text" id="utm_content" value={utm_content || 'AQUI'} name="utm_content" placeholder="utm_content" />
+                <input className="hidden" type="text" id="utm_campaign" value={utm_campaign || 'AQUI'} name="utm_campaign" placeholder="utm_campaign" />
+                <input className="hidden" type="text" id="utm_source" value={utm_source || 'AQUI'} name="utm_source" placeholder="utm_source" />
             </form>
         </div>
     )
