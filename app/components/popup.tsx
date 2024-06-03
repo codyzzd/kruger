@@ -72,34 +72,36 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
         }
     }, [isActive])
 
-    console.log(params.get('utm_campaign'))
-    async function formSubmited(e: FormEvent) {
-        let dataHlp = data
-        dataHlp['utm_campaign'] = params.get('utm_campaign') || 'AQUI'
-        dataHlp['utm_content'] = params.get('utm_content') || 'AQUI'
-        dataHlp['utm_medium'] = params.get('utm_medium') || 'AQUI'
-        dataHlp['utm_source'] = params.get('utm_source') || 'AQUI'
-        dataHlp['utm_term'] = params.get('utm_term') || 'AQUI'
-        setData(dataHlp)
-        e.preventDefault()
-        await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com", {
-            method: "POST",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        }).then(async res => {
-            router.push('/obrigado')
-        }).catch(e => console.log(e))
-    }
+    // async function formSubmited(e: FormEvent) {
+    //     let dataHlp = data
+    //     dataHlp['utm_campaign'] = params.get('utm_campaign') || 'AQUI'
+    //     dataHlp['utm_content'] = params.get('utm_content') || 'AQUI'
+    //     dataHlp['utm_medium'] = params.get('utm_medium') || 'AQUI'
+    //     dataHlp['utm_source'] = params.get('utm_source') || 'AQUI'
+    //     dataHlp['utm_term'] = params.get('utm_term') || 'AQUI'
+    //     setData(dataHlp)
+    //     console.log(data)
+    //     e.preventDefault()
+    //     await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com", {
+    //         method: "POST",
+    //         headers: {
+    //             "Accept": "application/json",
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(data)
+    //     }).then(async res => {
+    //         router.push('/obrigado')
+    //     }).catch(e => console.log(e))
+    // }
 
     return (
         <div className={`fixed top-0 left-0 w-full h-screen flex items-center justify-center transition ${isActive ? 'z-50 opacity-100' : '-z-50 opacity-0'}`}>
             <div onClick={() => setIsActive(!isActive)} className={`absolute top-0 left-0 w-full h-full bg-black/80`}></div>
             <form
                 className="relative rounded-md w-full sm:max-w-xl bg-white z-50 py-8 px-6 sm:mx-0 mx-2"
-                onSubmit={(e) => formSubmited(e)}
+                // onSubmit={(e) => formSubmited(e)}
+                method="post"
+                action="https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com"
             >
                 <button type="button" className="absolute top-4 right-6" onClick={() => setIsActive(!isActive)}>
                     <svg className="w-8 h-8 fill-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z" /></svg>
@@ -127,11 +129,11 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                         <span>Falar com advogado especialista</span>
                     </button>
                 </div>
-                {/* <input className="hidden" type="text" id="utm_term" value={utm_term || ''} name="utm_term" placeholder="utm_term" />
+                <input className="hidden" type="text" id="utm_term" value={utm_term || ''} name="utm_term" placeholder="utm_term" />
                 <input className="hidden" type="text" id="utm_medium" value={utm_medium || ''} name="utm_medium" placeholder="utm_medium" />
                 <input className="hidden" type="text" id="utm_content" value={utm_content || ''} name="utm_content" placeholder="utm_content" />
                 <input className="hidden" type="text" id="utm_campaign" value={utm_campaign || ''} name="utm_campaign" placeholder="utm_campaign" />
-                <input className="hidden" type="text" id="utm_source" value={utm_source || ''} name="utm_source" placeholder="utm_source" /> */}
+                <input className="hidden" type="text" id="utm_source" value={utm_source || ''} name="utm_source" placeholder="utm_source" />
             </form>
         </div>
     )
