@@ -108,7 +108,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                 </button>
 
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-xl font-bold">Preencha os campos abaixo.</h2>
+                    <h2 className="text-xl font-bold">Preencha para calcular a redução.</h2>
                     <div className="flex flex-col gap-1">
                         <input onChange={(e) => handleChange('name', e.target.value)} value={data.name} className="outline-none border rounded py-2 px-4" type="text" id="name" name="name" placeholder="Insira seu nome" min={2} required />
                     </div>
@@ -126,7 +126,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                             alt="Whatsapp Icon"
                             className="hidden sm:block"
                         />
-                        <span>Falar com advogado especialista</span>
+                        <span>Calcule a redução da sua dívida</span>
                     </button>
                     <div>
                         <input type="hidden" id="utm_term" value={utm_term || 'AQUI'} name="utm_term" placeholder="utm_term" />
