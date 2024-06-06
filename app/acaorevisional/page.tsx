@@ -52,14 +52,15 @@ export default function Home({ searchParams }: AcaoRevisionalProps) {
           <div className="flex flex-col items-center space-y-4 sm:space-y-8 text-center">
             <div className="flex flex-col items-center py-2 sm:space-y-4">
               <h1 className="text-3xl md:text-4xl md:w-10/12 lg:w-[80%] lg:text-5xl ss4">
-                Descubra como é possível reduzir em até 90% das suas dívidas
+                Pare de perder o seu sono! <br/>
+                O vídeo abaixo revela como é possível reduzir em até 90% suas dívidas
               </h1>
               <h2 className="text-lg md:px-20 lg:text-xl lg:px-48">
-                O pequeno vídeo abaixo revela como parar de pagar juros indevidos
+                E nunca mais pague juros abusivos
               </h2>
-              <h2 className="text-lg md:px-20 lg:text-xl lg:px-48">
+              {/* <h2 className="text-lg md:px-20 lg:text-xl lg:px-48">
                 Conte com um advogado especialista em bancário para defender os seus direitos
-              </h2>
+              </h2> */}
             </div>
             <hr className="border-t-[1px] border-orange-500 h-[1px] md:w-1/2 w-full"></hr>
             <iframe className="md:w-3/4 md:h-[524px] w-full h-56 rounded" src="https://www.youtube.com/embed/e6oAhGLwRK0?si=YXNKu_t8uPNgDkCJ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
@@ -362,7 +363,7 @@ export default function Home({ searchParams }: AcaoRevisionalProps) {
             O que dizem da Advocacia Krüger Toledo?
           </h2>
 
-          {/* grid para 4 colunas */} 
+          {/* grid para 4 colunas */}
 
           <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-4 [&>div]:bg-[#142157]">
             <div className="p-4">
