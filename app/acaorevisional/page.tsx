@@ -2,7 +2,6 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Suspense } from "react";
-import { FacebookPixelEvents } from "../components/pixel";
 import { Popup } from "../components/popup";
 import { ModalButton } from "../components/modal-button";
 
@@ -26,12 +25,6 @@ interface AcaoRevisionalProps {
 export default function Home({ searchParams }: AcaoRevisionalProps) {
   return (
     <>
-
-      <GoogleTagManager gtmId="GTM-MXFVWCBW" />
-      <Suspense fallback={null}>
-        <FacebookPixelEvents />
-      </Suspense>
-
 
       {/* hero */}
       <section

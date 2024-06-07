@@ -1,9 +1,6 @@
-import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
-import { FacebookPixelEvents } from "../components/pixel";
 
 
 export const metadata: Metadata = {
@@ -15,12 +12,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-
-        <GoogleTagManager gtmId="GTM-MXFVWCBW" />
-        <Suspense fallback={null}>
-          <FacebookPixelEvents />
-        </Suspense>
-
 
       {/* hero */}
       <section
