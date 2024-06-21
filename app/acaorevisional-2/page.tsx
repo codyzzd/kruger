@@ -89,7 +89,7 @@ export default function Home({ searchParams }: AcaoRevisionalProps) {
       </section>
 
       {/* etapas */}
-      <section className="text-white bg-[#022442] ">
+      <section className="text-white bg-[#022442]">
         <div className="container flex flex-col items-center justify-center p-8 mx-auto space-y-8 md:py-16">
           <div className="flex flex-col space-y-2 text-center">
             <h2 className="text-2xl text-center md:text-3xl lg:text-4xl ss4">

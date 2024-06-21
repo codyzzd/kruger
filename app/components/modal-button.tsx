@@ -1,10 +1,14 @@
 'use client'
 
-import { useContext } from "react"
+import { ReactNode, useContext } from "react"
 import { PopupContext } from "./context/popup"
 import Image from "next/image"
 
-export function ModalButton() {
+interface ModalButtonProps {
+    children?: ReactNode
+}
+
+export function ModalButton({ children }: ModalButtonProps) {
     const { isActive, setIsActive } = useContext(PopupContext)
 
     return (
@@ -19,7 +23,9 @@ export function ModalButton() {
                 alt="Whatsapp Icon"
                 className="hidden sm:block max-h-[40px] max-w-[40px]"
             />
-            <span>Calcule a redução da sua dívida</span>
+            {children ? (
+                <span>{children}</span>
+            ): <span>Calcule a redução da sua dívida</span>}
         </button>
     )
 }

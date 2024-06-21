@@ -11,6 +11,7 @@ interface PopupProps {
     utm_content: string
     utm_campaign: string
     utm_source: string
+    title?: string
 }
 
 interface dataProps {
@@ -34,7 +35,7 @@ let initialData = {
     utm_source: ''
 }
 
-export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_term }: PopupProps) {
+export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_term, title }: PopupProps) {
     const { isActive, setIsActive } = useContext(PopupContext)
     const [data, setData] = useState<dataProps>(initialData)
     const router = useRouter()
@@ -126,7 +127,9 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                             alt="Whatsapp Icon"
                             className="hidden sm:block"
                         />
-                        <span>Calcule a redução da sua dívida</span>
+                        {title ? (
+                            <span>{title}</span>
+                        ): <span>Calcule a redução da sua dívida</span>}
                     </button>
                     <div>
                         <input type="hidden" id="utm_term" value={utm_term || 'AQUI'} name="utm_term" placeholder="utm_term" />
