@@ -34,7 +34,7 @@ export default function Page({ searchParams }: DividaProps) {
                             <h1 className="text-2xl sm:text-4xl font-bold text-center">
                                 Descubra como renegociar a sua dívida atrasada por meios jurídicos
                             </h1>
-                            <p className="text-zinc-600 text-center text-sm">(o texto abaixo revela como é possível <strong>quitar a sua dívida com até 90%</strong> de desconto)</p>
+                            <p className="text-zinc-600 text-center text-sm">(o texto abaixo revela como é possível <span className="text-[#ed8428]"><strong>quitar a sua dívida com até 90%</strong></span> de desconto)</p>
                             <div className="max-w-3xl w-full">
                                 <Image
                                     className="rounded-xl"

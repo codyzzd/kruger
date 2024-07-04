@@ -101,8 +101,6 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
             <form
                 className="relative rounded-md w-full sm:max-w-xl bg-white z-50 py-8 px-6 sm:mx-0 mx-2"
                 onSubmit={(e) => formSubmited(e)}
-                // method="post"
-                // action="https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com"
             >
                 <button type="button" className="absolute top-4 right-6" onClick={() => setIsActive(!isActive)}>
                     <svg className="w-8 h-8 fill-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z" /></svg>
