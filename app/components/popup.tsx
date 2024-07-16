@@ -18,6 +18,8 @@ interface dataProps {
     name: string
     email: string
     phone: string
+    valor_divida: string,
+    tempo_atraso: string,
     utm_term: string
     utm_medium: string
     utm_content: string
@@ -28,6 +30,8 @@ let initialData = {
     name: '',
     email: '',
     phone: '',
+    valor_divida: '',
+    tempo_atraso: '',
     utm_term: '',
     utm_medium: '',
     utm_content: '',
@@ -39,6 +43,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
     const { isActive, setIsActive } = useContext(PopupContext)
     const [data, setData] = useState<dataProps>(initialData)
     const router = useRouter()
+    const [error, setError] = useState<string>('')
 
     function handleChange(type: keyof dataProps, value: string) {
         let hlp = { ...data }
@@ -74,6 +79,14 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
 
     async function formSubmited(e: FormEvent) {
         e.preventDefault()
+
+        setError('')
+        
+        if (!data.tempo_atraso) {
+            setError('Preencha o campo acima corretamente.')
+            return
+        }
+
         let dataHlp = data
 
         dataHlp['utm_campaign'] = window.location.href.split('?')[1]?.split("&")[0]?.split("=")[1] || 'AQUI'
@@ -109,13 +122,34 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                 <div className="flex flex-col gap-4">
                     <h2 className="text-xl font-bold">Preencha para calcular a redução.</h2>
                     <div className="flex flex-col gap-1">
-                        <input onChange={(e) => handleChange('name', e.target.value)} value={data.name} className="outline-none border rounded py-2 px-4" type="text" id="name" name="name" placeholder="Insira seu nome" min={2} required />
+                        <input onChange={(e) => handleChange('name', e.target.value)} value={data.name} className="text-zinc-500 outline-none border rounded py-2 px-4" type="text" id="name" name="name" placeholder="Insira seu nome" min={2} required />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <input onChange={(e) => handleChange('email', e.target.value)} value={data.email} className="outline-none border rounded py-2 px-4" type="text" id="email" name="email" placeholder="Insira seu melhor e-mail" required />
+                        <input onChange={(e) => handleChange('email', e.target.value)} value={data.email} className="text-zinc-500 outline-none border rounded py-2 px-4" type="text" id="email" name="email" placeholder="Insira seu melhor e-mail" required />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <input onChange={(e) => handleChange('phone', e.target.value)} value={data.phone} className="outline-none border rounded py-2 px-4" type="tel" id="tel" name="phone" maxLength={16} placeholder="WhatsApp: (00) 00000-0000" required />
+                        <input onChange={(e) => handleChange('phone', e.target.value)} value={data.phone} className="text-zinc-500 outline-none border rounded py-2 px-4" type="tel" id="tel" name="phone" maxLength={16} placeholder="WhatsApp: (00) 00000-0000" required />
+                    </div>
+                    <div className="flex items-center gap-0">
+                        <span className="outline-none border rounded py-2 px-3 text-zinc-500">R$</span>
+                        <input onChange={(e) => handleChange('valor_divida', e.target.value)} value={data.valor_divida} className="outline-none border rounded py-2 px-4 w-full text-zinc-500" type="number" name="valor_divida" maxLength={16} placeholder="Valor da dívida" required />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                        <select
+                            onChange={(e) => handleChange('tempo_atraso', e.target.value)}
+                            value={data.tempo_atraso}
+                            name="tempo_atraso"
+                            className="outline-none border rounded py-2 px-4"
+                            required
+                        >
+                            <option>Há quanto tempo sua dívida está atrasada?</option>
+                            <option value="Não está atrasada">Não está atrasada</option>
+                            <option value="Está há 3 meses atrasada">Está há 3 meses atrasada</option>
+                            <option value="Está há 6 meses atrasada">Está há 6 meses atrasada</option>
+                            <option value="Está há 1 ano atrasada">Está há 1 ano atrasada</option>
+                            <option value="Está há mais de 1 ano atrasada">Está há mais de 1 ano atrasada</option>
+                        </select>
+                        <span className="text-sm text-red-400 ms-2">{error}</span>
                     </div>
                     <button className="w-full text-sm sm:text-base text-center flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded" type="submit">
                         <Image
@@ -127,7 +161,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                         />
                         {title ? (
                             <span>{title}</span>
-                        ): <span>Calcule a redução da sua dívida</span>}
+                        ) : <span>Calcule a redução da sua dívida</span>}
                     </button>
                     <div>
                         <input type="hidden" id="utm_term" value={utm_term || 'AQUI'} name="utm_term" placeholder="utm_term" />
