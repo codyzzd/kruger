@@ -45,10 +45,22 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
     const router = useRouter()
     const [error, setError] = useState<string>('')
 
+    function formatCurrency(value: string) {
+        // Remove any existing commas or periods
+        const numericValue = value.replace(/\D/g, '');
+
+        // Format the number with periods as thousand separators
+        const formattedValue = numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+        return formattedValue;
+    }
+
     function handleChange(type: keyof dataProps, value: string) {
         let hlp = { ...data }
         if (type === 'phone') {
             hlp[type] = formatPhoneNumber(value)
+        } else if (type === 'valor_divida') {
+            hlp[type] = formatCurrency(value);
         } else {
             hlp[type] = value
         }
@@ -81,7 +93,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
         e.preventDefault()
 
         setError('')
-        
+
         if (!data.tempo_atraso) {
             setError('Preencha o campo acima corretamente.')
             return
@@ -132,7 +144,17 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                     </div>
                     <div className="flex items-center gap-0">
                         <span className="outline-none border rounded py-2 px-3 text-zinc-500">R$</span>
-                        <input onChange={(e) => handleChange('valor_divida', e.target.value)} value={data.valor_divida} className="outline-none border rounded py-2 px-4 w-full text-zinc-500" type="number" name="valor_divida" maxLength={16} placeholder="Valor da dívida" required />
+                        <input
+                            onChange={(e) => handleChange('valor_divida', e.target.value)}
+                            value={data.valor_divida}
+                            className="outline-none border rounded py-2 px-4 w-full text-zinc-500"
+                            type="text"
+                            name="valor_divida"
+                            maxLength={16}
+                            placeholder="Valor da dívida"
+                            required
+                        />
+                        <span className="outline-none border rounded py-2 px-3 text-zinc-500">,00</span>
                     </div>
                     <div className="flex flex-col gap-1">
                         <select
