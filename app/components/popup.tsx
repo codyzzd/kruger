@@ -3,7 +3,7 @@
 import { FormEvent, useContext, useEffect, useState } from "react"
 import { PopupContext } from "./context/popup"
 import Image from "next/image"
-import { useRouter, useSearchParams } from "next/navigation"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 interface PopupProps {
     utm_term: string
@@ -44,6 +44,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
     const [data, setData] = useState<dataProps>(initialData)
     const router = useRouter()
     const [error, setError] = useState<string>('')
+    const pathname = usePathname().split('/')
 
     function formatCurrency(value: string) {
         // Remove any existing commas or periods
@@ -101,13 +102,22 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
 
         let dataHlp = data
 
-        dataHlp['utm_campaign'] = window.location.href.split('?')[1]?.split("&")[0]?.split("=")[1] || 'AQUI'
-        dataHlp['utm_content'] = window.location.href.split('?')[1]?.split("&")[1]?.split("=")[1] || 'AQUI'
-        dataHlp['utm_medium'] = window.location.href.split('?')[1]?.split("&")[1]?.split("=")[1] || 'AQUI'
-        dataHlp['utm_source'] = window.location.href.split('?')[1]?.split("&")[2]?.split("=")[1] || 'AQUI'
-        dataHlp['utm_term'] = window.location.href.split('?')[1]?.split("&")[3]?.split("=")[1] || 'AQUI'
+        dataHlp['utm_campaign'] = window.location.href.split('?')[1]?.split("&")[0]?.split("=")[1] || 'nao-traqueado'
+        dataHlp['utm_content'] = window.location.href.split('?')[1]?.split("&")[1]?.split("=")[1] || 'nao-traqueado'
+        dataHlp['utm_medium'] = window.location.href.split('?')[1]?.split("&")[1]?.split("=")[1] || 'nao-traqueado'
+        dataHlp['utm_source'] = window.location.href.split('?')[1]?.split("&")[2]?.split("=")[1] || 'nao-traqueado'
+        dataHlp['utm_term'] = window.location.href.split('?')[1]?.split("&")[3]?.split("=")[1] || 'nao-traqueado'
         setData(dataHlp)
-        e.preventDefault()
+
+        // const sheetsResponse = await fetch('/api/sheets', {
+        await fetch('https://sheet.best/api/sheets/f339703c-2197-4e48-b4d5-5889c07e144c', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({...data, pagina: pathname[pathname.length -1]})
+        })
+
         await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com", {
             method: "POST",
             headers: {
