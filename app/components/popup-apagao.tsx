@@ -39,29 +39,17 @@ let initialData = {
     utm_source: ''
 }
 
-export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_term, title }: PopupProps) {
+export function PopupApagao({ utm_campaign, utm_content, utm_medium, utm_source, utm_term, title }: PopupProps) {
     const { isActive, setIsActive } = useContext(PopupContext)
     const [data, setData] = useState<dataProps>(initialData)
     const router = useRouter()
     const [error, setError] = useState<string>('')
     const pathname = usePathname().split('/')
 
-    function formatCurrency(value: string) {
-        // Remove any existing commas or periods
-        const numericValue = value.replace(/\D/g, '');
-
-        // Format the number with periods as thousand separators
-        const formattedValue = numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-
-        return formattedValue;
-    }
-
     function handleChange(type: keyof dataProps, value: string) {
         let hlp = { ...data }
         if (type === 'phone') {
             hlp[type] = formatPhone(value)
-        } else if (type === 'valor_divida') {
-            hlp[type] = formatCurrency(value);
         } else {
             hlp[type] = value
         }
@@ -88,13 +76,6 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
     async function formSubmited(e: FormEvent) {
         e.preventDefault()
 
-        setError('')
-
-        if (!data.tempo_atraso) {
-            setError('Preencha o campo acima corretamente.')
-            return
-        }
-
         let dataHlp = data
 
         dataHlp['utm_campaign'] = window.location.href.split('?')[1]?.split("&")[0]?.split("=")[1] || 'nao-traqueado'
@@ -113,7 +94,8 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
             body: JSON.stringify({...data, pagina: pathname[pathname.length -1]})
         })
 
-        await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com", {
+        // await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com", {
+        await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/2b6d400e4309804b30b48b6a575aa708?not_query=true&redirect_url=google.com", {
             method: "POST",
             headers: {
                 "Accept": "application/json",
@@ -126,7 +108,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
     }
 
     return (
-        <div className={`fixed top-0 left-0 w-full h-screen flex items-center justify-center transition ${isActive ? 'z-50 opacity-100' : '-z-50 opacity-0'}`}>
+        <div className={`fixed top-0 left-0 w-full h-screen flex items-center justify-center transition ${isActive ? 'z-[999] opacity-100' : '-z-50 opacity-0'}`}>
             <div onClick={() => setIsActive(!isActive)} className={`absolute top-0 left-0 w-full h-full bg-black/80`}></div>
             <form
                 className="relative rounded-md w-full sm:max-w-xl bg-white z-50 py-8 px-6 sm:mx-0 mx-2"
@@ -137,7 +119,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                 </button>
 
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-xl font-bold">Preencha para calcular a redução.</h2>
+                    <h2 className="text-xl font-bold">Preencha para entrarmos em contato.</h2>
                     <div className="flex flex-col gap-1">
                         <input onChange={(e) => handleChange('name', e.target.value)} value={data.name} className="text-zinc-500 outline-none border rounded py-2 px-4" type="text" id="name" name="name" placeholder="Insira seu nome" min={2} required />
                     </div>
@@ -146,37 +128,6 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                     </div>
                     <div className="flex flex-col gap-1">
                         <input onChange={(e) => handleChange('phone', e.target.value)} value={data.phone} className="text-zinc-500 outline-none border rounded py-2 px-4" type="tel" id="tel" name="phone" maxLength={16} placeholder="WhatsApp: (00) 00000-0000" required />
-                    </div>
-                    <div className="flex items-center gap-0">
-                        <span className="outline-none border rounded py-2 px-3 text-zinc-500">R$</span>
-                        <input
-                            onChange={(e) => handleChange('valor_divida', e.target.value)}
-                            value={data.valor_divida}
-                            className="outline-none border rounded py-2 px-4 w-full text-zinc-500"
-                            type="text"
-                            name="valor_divida"
-                            maxLength={16}
-                            placeholder="Valor da dívida"
-                            required
-                        />
-                        <span className="outline-none border rounded py-2 px-3 text-zinc-500">,00</span>
-                    </div>
-                    <div className="flex flex-col gap-1">
-                        <select
-                            onChange={(e) => handleChange('tempo_atraso', e.target.value)}
-                            value={data.tempo_atraso}
-                            name="tempo_atraso"
-                            className="outline-none border rounded py-2 px-4"
-                            required
-                        >
-                            <option>Há quanto tempo sua dívida está atrasada?</option>
-                            <option value="Não está atrasada">Não está atrasada</option>
-                            <option value="Está há 3 meses atrasada">Está há 3 meses atrasada</option>
-                            <option value="Está há 6 meses atrasada">Está há 6 meses atrasada</option>
-                            <option value="Está há 1 ano atrasada">Está há 1 ano atrasada</option>
-                            <option value="Está há mais de 1 ano atrasada">Está há mais de 1 ano atrasada</option>
-                        </select>
-                        <span className="text-sm text-red-400 ms-2">{error}</span>
                     </div>
                     <button className="w-full text-sm sm:text-base text-center flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded" type="submit">
                         <Image
@@ -188,7 +139,7 @@ export function Popup({ utm_campaign, utm_content, utm_medium, utm_source, utm_t
                         />
                         {title ? (
                             <span>{title}</span>
-                        ) : <span>Calcule a redução da sua dívida</span>}
+                        ) : <span>Solicite contato agora</span>}
                     </button>
                     <div>
                         <input type="hidden" id="utm_term" value={utm_term || 'AQUI'} name="utm_term" placeholder="utm_term" />
