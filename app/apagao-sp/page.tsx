@@ -27,7 +27,7 @@ export default function Page({ searchParams }: pageProps) {
                 </div>
             </div>
             <main className="pt-24">
-                <section className="w-full flex items-center justify-center pb-12 px-4">
+                <section className="w-full flex items-center justify-center px-4">
                     <div className="w-full flex justify-center items-center flex-col gap-12">
                         <div className="relative w-full max-w-4xl h-96 sm:block hidden">
                             <Image
@@ -35,16 +35,14 @@ export default function Page({ searchParams }: pageProps) {
                                 alt=""
                                 objectFit="contain"
                                 layout="fill"
-                                className="rounded-xl"
                             />
                         </div>
-                        <div className="relative w-full max-w-4xl h-96 sm:hidden block ">
+                        <div className="relative w-full max-w-4xl h-64 sm:hidden block ">
                             <Image
                                 src="/images/art2.png"
                                 alt=""
                                 objectFit="contain"
                                 layout="fill"
-                                className="rounded-xl"
                             />
                         </div>
                     </div>
