@@ -81,7 +81,7 @@ export default function Page({ searchParams }: pageProps) {
                                     <div className="flex flex-col gap-4 font-medium">
                                         <div>
                                             <h1 className="text-2xl font-bold">Quer entrar com o pedido de indenização? Veja como começar</h1>
-                                            <p>Se você foi prejudicado pela falta de energia, o caminho para a indenização começa com o suporte certo. Um advogado especiapzado pode:</p>
+                                            <p>Se você foi prejudicado pela falta de energia, o caminho para a indenização começa com o suporte certo. Um advogado especializado pode:</p>
                                         </div>
                                         <ul className="flex flex-col gap-1 list-disc ms-5">
                                             <li>Analisar seu caso: Identificar se você tem direito à indenização.</li>

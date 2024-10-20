@@ -18,8 +18,8 @@ interface dataProps {
     name: string
     email: string
     phone: string
-    valor_divida: string,
-    tempo_atraso: string,
+    neighborhood: string,
+    tempo_sem_luz: string,
     utm_term: string
     utm_medium: string
     utm_content: string
@@ -30,8 +30,8 @@ let initialData = {
     name: '',
     email: '',
     phone: '',
-    valor_divida: '',
-    tempo_atraso: '',
+    neighborhood: '',
+    tempo_sem_luz: '',
     utm_term: '',
     utm_medium: '',
     utm_content: '',
@@ -58,10 +58,10 @@ export function PopupApagao({ utm_campaign, utm_content, utm_medium, utm_source,
 
     function formatPhone(phone: string): string {
         phone = phone.replace(/\D/g, '');
-    
+
         phone = phone.replace(/^(\d{2})(\d)/, '($1) $2');
         phone = phone.replace(/(\d{5})(\d)/, '$1-$2');
-    
+
         return phone;
     }
 
@@ -91,7 +91,7 @@ export function PopupApagao({ utm_campaign, utm_content, utm_medium, utm_source,
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({...data, pagina: pathname[pathname.length -1]})
+            body: JSON.stringify({ ...data, pagina: pathname[pathname.length - 1] })
         })
 
         // await fetch("https://webhook.sellflux.com/webhook/v2/form/lead/91747b8002b99dd51d584db8e3b6ab3e?not_query=true&redirect_url=google.com", {
@@ -129,6 +129,24 @@ export function PopupApagao({ utm_campaign, utm_content, utm_medium, utm_source,
                     <div className="flex flex-col gap-1">
                         <input onChange={(e) => handleChange('phone', e.target.value)} value={data.phone} className="text-zinc-500 outline-none border rounded py-2 px-4" type="tel" id="tel" name="phone" maxLength={16} placeholder="WhatsApp: (00) 00000-0000" required />
                     </div>
+                    <div className="flex flex-col gap-1">
+                        <input onChange={(e) => handleChange('neighborhood', e.target.value)} value={data.neighborhood} className="text-zinc-500 outline-none border rounded py-2 px-4" type="text" id="neighborhood" name="neighborhood" maxLength={16} placeholder="Digite seu bairro" required />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                        <select
+                            value={data.tempo_sem_luz}
+                            onChange={(e) => handleChange('tempo_sem_luz', e.target.value)}
+                            className="text-zinc-500 outline-none border rounded py-2 px-4"
+                        >
+                            <option>1 dia</option>
+                            <option>2 dias</option>
+                            <option>3 dias</option>
+                            <option>4 dias</option>
+                            <option>Mais de 4 dias</option>
+                        </select>
+                    </div>
+                    {/* neighborhood
+                    tempo_sem_luz */}
                     <button className="w-full text-sm sm:text-base text-center flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded" type="submit">
                         <Image
                             src="/images/wpp.png"
