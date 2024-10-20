@@ -31,7 +31,7 @@ let initialData = {
     email: '',
     phone: '',
     neighborhood: '',
-    tempo_sem_luz: '',
+    tempo_sem_luz: 'Tempo sem luz',
     utm_term: '',
     utm_medium: '',
     utm_content: '',
@@ -138,6 +138,7 @@ export function PopupApagao({ utm_campaign, utm_content, utm_medium, utm_source,
                             onChange={(e) => handleChange('tempo_sem_luz', e.target.value)}
                             className="text-zinc-500 outline-none border rounded py-2 px-4"
                         >
+                            <option disabled defaultChecked>Tempo sem luz</option>
                             <option>1 dia</option>
                             <option>2 dias</option>
                             <option>3 dias</option>
