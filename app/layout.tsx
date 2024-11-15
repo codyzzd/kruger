@@ -1,7 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { Montserrat, Source_Serif_4 } from "next/font/google";
+import { Montserrat, Source_Serif_4, Merriweather } from "next/font/google";
 import "./globals.css";
 import { PopupProvider } from "./components/context/popup";
 
@@ -14,6 +14,11 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
   variable: "--montserrat-font",
+});
+
+const merriwather = Merriweather({
+  weight: ['300', '400', '700', '900'],
+  subsets: ['latin']
 });
 
 export const metadata: Metadata = {
@@ -47,7 +52,7 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-NLM24BX')
         `}} />
       </head>
-      <body className={`${sourceserif.variable} ${montserrat.variable}`}>
+      <body className={`${sourceserif.variable} ${montserrat.variable} ${merriwather.className}`}>
         <SpeedInsights />
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLM24BX"
           height="0" width="0"></iframe></noscript>
