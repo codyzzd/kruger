@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.ss4{
+font-family: var(--ss4-font);
+}
+*{
+  font-family: var(--montserrat-font);
+}
+/*
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+*/
+body {
+
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.merriwather {
+  font-family: 'merriwather'
+}
+.bg-header {
+  background-image: url('../public/images/dividas/HERO\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+.bg-1 {
+  background-image: url('../public/images/dividas/Dobra\ 03\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+.bg-2 {
+  background-image: url('../public/images/dividas/Dobra\ 04\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+
+.radial {
+  background: radial-gradient(
+    circle,
+    rgb(25, 60, 90) 0%, /* Centro mais luminoso */
+    rgb(10, 33, 54) 50%, /* Transição suave */
+    rgb(5, 20, 40) 100% /* Periferia mais escura */
+  );
+}
