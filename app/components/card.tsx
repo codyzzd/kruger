@@ -10,7 +10,7 @@ interface CardProps {
 export default function Card({ imagePath, subtitle, title }: CardProps) {
 
     return (
-        <div className="h-[284px] max-w-sm flex flex-col text-center items-center gap-4">
+        <div className="h-[284px] max-w-sm flex flex-col text-center items-center gap-4 sm:border-none border px-4 py-8 rounded-xl sm:py-0 sm:px-0">
             <div className="relative w-20 h-20">
                 <Image
                     src={`/images/card/${imagePath}.png`}

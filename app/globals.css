@@ -42,3 +42,21 @@ body {
 .merriwather {
   font-family: 'merriwather'
 }
+.bg-header {
+  background-image: url('../public/images/dividas/HERO\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+.bg-1 {
+  background-image: url('../public/images/dividas/Dobra\ 03\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+.bg-2 {
+  background-image: url('../public/images/dividas/Dobra\ 04\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
