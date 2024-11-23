@@ -60,13 +60,13 @@ export function PopupReduzaDividas({ utm_campaign, utm_content, utm_medium, utm_
         hlp[type] = value
 
         if (type === 'valor_divida') {
-            
+
             setFirstSelectErrorMessage('')
         } else if (type === 'divida_esta_atrasada') {
 
             setSecondSelectErrorMessage('')
         }
-        
+
         setData(hlp)
     }
 
@@ -144,32 +144,42 @@ export function PopupReduzaDividas({ utm_campaign, utm_content, utm_medium, utm_
         <div className={`fixed top-0 left-0 w-full h-screen flex items-center justify-center transition ${isActive ? 'z-50 opacity-100' : '-z-50 opacity-0'}`}>
             <div onClick={() => setIsActive(!isActive)} className={`absolute top-0 left-0 w-full h-full bg-black/80`}></div>
             <form
-                className="relative rounded-md w-full sm:max-w-xl bg-white z-50 py-8 px-6 sm:mx-0 mx-2"
+                className="relative rounded-xl w-full sm:max-w-xl bg-white z-50 sm:mx-0 mx-2 overflow-y-hidden"
                 onSubmit={(e) => formSubmited(e)}
             >
+                <div className="w-full flex justify-center py-4 bg-[#022341]">
+                    <div className="relative w-[124px] h-[48px]">
+                        <Image
+                            src="/images/logokruger.png"
+                            alt="Logo Kruger Toledo Advocacia"
+                            layout="fill"
+                            objectFit="contain"
+                        />
+                    </div>
+                </div>
                 <button type="button" className="absolute sm:top-4 sm:right-6 top-2 right-2" onClick={() => setIsActive(!isActive)}>
                     <svg className="sm:w-8 sm:h-8 w-6 h-6 fill-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z" /></svg>
                 </button>
 
-                <div className="flex flex-col gap-4">
-                    <h2 className="text-xl font-bold">Preencha para calcular a redução.</h2>
+                <div className="flex flex-col gap-4 py-12 px-10">
+                    <h2 className="text-xl font-bold text-center">Preencha seus dados e agende uma análise com nossos especialistas:</h2>
                     <div className="flex flex-col gap-1">
-                        <input onChange={(e) => handleChange('name', e.target.value)} value={data.name} className="text-zinc-500 outline-none border rounded py-2 px-4" type="text" id="name" name="name" placeholder="Insira seu nome" min={2} required />
+                        <input onChange={(e) => handleChange('name', e.target.value)} value={data.name} className="shadow text-zinc-500 outline-none border rounded-xl py-2 px-4" type="text" id="name" name="name" placeholder="Insira seu nome" min={2} required />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <input onChange={(e) => handleChange('email', e.target.value)} value={data.email} className="text-zinc-500 outline-none border rounded py-2 px-4" type="text" id="email" name="email" placeholder="Insira seu melhor e-mail" required />
+                        <input onChange={(e) => handleChange('email', e.target.value)} value={data.email} className="shadow text-zinc-500 outline-none border rounded-xl py-2 px-4" type="text" id="email" name="email" placeholder="Insira seu melhor e-mail" required />
                     </div>
                     <div className="flex flex-col gap-1">
                         <select
                             onChange={(e) => handleChange('valor_divida', e.target.value)}
                             value={data.valor_divida}
                             name="valor_divida"
-                            className="outline-none border rounded py-2 px-4"
+                            className="shadow outline-none border rounded-xl py-2 px-4"
                             required
                         >
                             <option>Qual o valor da sua dívida?</option>
-                            <option value="Abaixo de 80 mil">Abaixo de 80 mil</option>
-                            <option value="Entre 80 a 500 mil">Entre 80 a 500 mil</option>
+                            <option value="Abaixo de 80 mil">Abaixo de 100 mil</option>
+                            <option value="Entre 80 a 500 mil">Entre 100 a 500 mil</option>
                             <option value="Entre 500 a 1 milhão">Entre 500 a 1 milhão</option>
                             <option value="Acima de 1 milhão">Acima de 1 milhão</option>
                         </select>
@@ -180,7 +190,7 @@ export function PopupReduzaDividas({ utm_campaign, utm_content, utm_medium, utm_
                             onChange={(e) => handleChange('divida_esta_atrasada', e.target.value)}
                             value={data.divida_esta_atrasada}
                             name="divida_esta_atrasada"
-                            className="outline-none border rounded py-2 px-4"
+                            className="shadow outline-none border rounded-xl py-2 px-4"
                             required
                         >
                             <option>Sua dívida está em atraso?</option>
@@ -189,7 +199,7 @@ export function PopupReduzaDividas({ utm_campaign, utm_content, utm_medium, utm_
                         </select>
                         <span className="text-sm text-red-400 ms-2">{secondSelectErrorMessage}</span>
                     </div>
-                    <button className="w-full text-sm sm:text-base text-center flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded" type="submit">
+                    <button className="shadow w-full text-sm sm:text-base text-center flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 transition rounded" type="submit">
                         <Image
                             src="/images/wpp.png"
                             width={20}

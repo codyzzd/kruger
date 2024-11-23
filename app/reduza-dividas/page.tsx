@@ -19,7 +19,7 @@ export default function Page({ searchParams }: PageProps) {
     return (
         <>
             <div className="fixed top-0 w-full bg-gradient-to-r from-[#05081B] to-[#2A3162] text-center py-2 z-50">
-                <p className="text-white text-sm sm:text-base"><strong>EXCLUSIVO</strong> para <strong>DÍVIDAS</strong> acima de <strong>80 mill reais</strong></p>
+                <p className="text-white text-sm sm:text-base"><strong>EXCLUSIVO</strong> para <strong>DÍVIDAS</strong> acima de <strong>100 mill reais</strong></p>
             </div>
             <header className="bg-header w-full min-h-screen flex flex-col items-center justify-center bg-zinc-900 text-white px-4 sm:pt-0">
                 <div className="max-w-6xl flex flex-col items-center text-center gap-8">
@@ -32,9 +32,9 @@ export default function Page({ searchParams }: PageProps) {
                         />
                     </div>
                     <h1 className="text-3xl sm:text-5xl">Reduza até <strong>90% da sua dívida</strong> e retome o controle financeiro da sua vida!</h1>
-                    <p className="text-xl font-light merriwather max-w-3xl">Na análise de passivos da <strong className="merriwather font-bold">Kruger Toledo Advocacia</strong> você receberá um plano de redução das suas dívidas <strong>100% personalizado</strong> para alcançar a sua estabilidade</p>
+                    <p className="text-xl font-light merriwather max-w-3xl"><strong className="merriwather font-bold">Receba uma análise de passivos 100%</strong> personalizada e um plano estratégico para renegociar suas dívidas e recuperar a estabilidade financeira</p>
                     <p className="text-xl font-light merriwather max-w-sm">Tenha <strong className="merriwather font-bold">acesso a análise de passivos</strong> de um advogado especialista em direito bancário</p>
-                    <Button>Agendar atendimento</Button>
+                    <Button>Solicitar análise de passivos</Button>
                     <p className="text-xl font-light merriwather max-w-xs">As <strong className="merriwather font-bold">vagas</strong> para a análise são <strong className="merriwather font-bold">limitadas</strong> e podem encerrar a qualquer momento.</p>
                 </div>
             </header>
@@ -46,7 +46,7 @@ export default function Page({ searchParams }: PageProps) {
                             <Card
                                 imagePath="01"
                                 title="Reduzir o valor da sua dívida"
-                                subtitle={<>A redução de dívidas, em até <strong className="merriwather font-bold">90%</strong>, irá proporcionar uma segurança e tranquilidade na sua vida</>}
+                                subtitle={<>A redução de dívidas, em até <strong className="merriwather font-bold">90%</strong>, irá proporcionar uma segurança e tranquilidade na sua vida.</>}
                             />
                             <Card
                                 imagePath="02"
@@ -56,14 +56,14 @@ export default function Page({ searchParams }: PageProps) {
                             <Card
                                 imagePath="03"
                                 title="Criar novas perspectivas"
-                                subtitle={<>Com as finanças cuidadas por especialistas, <strong className="merriwather font-bold">você retomará a controle financeiro</strong> para buscar novos sonhos</>}
+                                subtitle={<>Com as suas finanças nas mãos de especialistas, <strong className="merriwather font-bold">você retomará a controle financeiro</strong> para buscar novos sonhos.</>}
                             />
                         </div>
                         <div className="max-w-sm flex flex-col gap-12">
                             <hr className="border-[1.5px] border-[#0E0C07]" />
                             <h4 className="text-2xl">Tenha acesso a <strong>análise de passivos</strong> de um <strong>especialista</strong>:</h4>
                             <div className="w-full flex justify-center">
-                                <Button>Agendar atendimento</Button>
+                                <Button>Solicitar análise de passivos</Button>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ export default function Page({ searchParams }: PageProps) {
                                         layout="fill"
                                     />
                                 </div>
-                                <p className="text-lg text-white">Pessoas que possuem dívidas acima de 80 mil reais</p>
+                                <p className="text-lg text-white">Pessoas que possuem dívidas acima de 100 mil reais</p>
                             </li>
                             <li className="relative ps-10">
                                 <div className="absolute left-0 w-8 h-8">
@@ -103,7 +103,7 @@ export default function Page({ searchParams }: PageProps) {
                                         layout="fill"
                                     />
                                 </div>
-                                <p className="text-lg text-white">Pessoas que buscam uma solução definitiva</p>
+                                <p className="text-lg text-white">Pessoas que desejam reestruturar suas dívidas e evitar problemas jurídicos</p>
                             </li>
                             <li className="relative ps-10">
                                 <div className="absolute left-0 w-8 h-8">
@@ -117,7 +117,7 @@ export default function Page({ searchParams }: PageProps) {
                                 <p className="text-lg text-white">Pessoas que querem retomar o controle sem lidar com os bancos</p>
                             </li>
                         </ul>
-                        <Button>Quero economizar impostos</Button>
+                        <Button>Solicitar análise de passivos</Button>
                     </div>
                 </Section>
                 <Section classNameS="py-12 sm:py-24 bg-zinc-950 bg-2 px-4">
@@ -199,10 +199,10 @@ export default function Page({ searchParams }: PageProps) {
                         <div className="sm:py-24 flex flex-col gap-4 sm:gap-8 max-w-xl">
                             <h1 className="text-2xl sm:text-3xl">Quem é a <strong>Kruger Toledo Advocacia</strong>?</h1>
                             <div className="flex flex-col gap-4">
-                                <p className="text-lg merriwather">A <strong className='merriwather'>Kruger Toledo Advocacia</strong> é um escritório especializado em gestão de passivos e redução de dívidas bancárias. Nossa missão é oferecer <strong className='merriwather'>soluções jurídicas seguras e eficazes</strong> para quem busca <strong className='merriwather'>retomar o controle financeiro</strong></p>
-                                <p className="text-lg merriwather">Com uma equipe experiente, atuamos com transparência e estratégia para alcançar os <strong className='merriwather'>melhores resultados em negociações</strong> complexas, <strong className='merriwather'>reduzindo os valores das dívidas de forma significativa</strong> e trazendo tranquilidade e estabilidade para nossos clientes.</p>
+                                <p className="text-lg merriwather">A <strong className="merriwather font-bold">Kruger Toledo Advocacia</strong> é referência em gestão de passivos e redução de dívidas bancárias. Nossa missão é <strong className="merriwather font-bold">simplificar o processo de renegociação de dívidas</strong>, ajudando a proteger seus bens e recuperar o controle financeiro.</p>
+                                <p className="text-lg merriwather">Com uma equipe especializada em negociações complexas, trabalhamos com transparência e estratégias personalizadas para garantir os melhores resultados. O objetivo é <strong className="merriwather font-bold">reduzir suas dívidas</strong> e oferecer tranquilidade durante todo o processo.</p>
                             </div>
-                            <Button>Agendar análise de passivos</Button>
+                            <Button>Solicitar análise de passivos</Button>
                         </div>
                     </div>
                 </section>

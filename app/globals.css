@@ -62,10 +62,15 @@ body {
 }
 
 .radial {
-  background: radial-gradient(
-    circle,
-    rgb(25, 60, 90) 0%, /* Centro mais luminoso */
-    rgb(10, 33, 54) 50%, /* Transição suave */
-    rgb(5, 20, 40) 100% /* Periferia mais escura */
+  background: linear-gradient(
+    rgb(10, 33, 54) 0%, /* Transição suave */
+    rgb(5, 20, 40) 100%, 
+    rgb(25, 60, 90) 100%, /* Centro mais luminoso */
   );
+  /* background: radial-gradient(
+    circle,
+    rgb(25, 60, 90) 0%, 
+    rgb(10, 33, 54) 50%,
+    rgb(5, 20, 40) 100% 
+  ); */
 }
