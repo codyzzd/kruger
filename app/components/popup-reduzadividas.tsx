@@ -17,6 +17,7 @@ interface PopupProps {
 interface dataProps {
     name: string
     email: string
+    phone: string
     valor_divida: string,
     divida_esta_atrasada: string,
     utm_term: string
@@ -28,6 +29,7 @@ interface dataProps {
 let initialData = {
     name: '',
     email: '',
+    phone: '',
     valor_divida: '',
     divida_esta_atrasada: '',
     utm_term: '',
@@ -58,13 +60,17 @@ export function PopupReduzaDividas({ utm_campaign, utm_content, utm_medium, utm_
         let hlp = { ...data }
 
         hlp[type] = value
-
+    
         if (type === 'valor_divida') {
 
             setFirstSelectErrorMessage('')
         } else if (type === 'divida_esta_atrasada') {
 
             setSecondSelectErrorMessage('')
+        } else if (type === 'phone') {
+            let phone = formatPhone(value)
+            
+            hlp[type] = phone
         }
 
         setData(hlp)
@@ -161,13 +167,16 @@ export function PopupReduzaDividas({ utm_campaign, utm_content, utm_medium, utm_
                     <svg className="sm:w-8 sm:h-8 w-6 h-6 fill-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z" /></svg>
                 </button>
 
-                <div className="flex flex-col gap-4 py-12 px-10">
+                <div className="flex flex-col gap-4 pt-12 pb-6 px-10">
                     <h2 className="text-xl font-bold text-center">Preencha seus dados e agende uma análise com nossos especialistas:</h2>
                     <div className="flex flex-col gap-1">
                         <input onChange={(e) => handleChange('name', e.target.value)} value={data.name} className="shadow text-zinc-500 outline-none border rounded-xl py-2 px-4" type="text" id="name" name="name" placeholder="Insira seu nome" min={2} required />
                     </div>
                     <div className="flex flex-col gap-1">
                         <input onChange={(e) => handleChange('email', e.target.value)} value={data.email} className="shadow text-zinc-500 outline-none border rounded-xl py-2 px-4" type="text" id="email" name="email" placeholder="Insira seu melhor e-mail" required />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                        <input onChange={(e) => handleChange('phone', e.target.value)} value={data.phone} className="shadow text-zinc-500 outline-none border rounded-xl py-2 px-4" type="text" id="phone" name="phone" placeholder="Insira seu telefone" required />
                     </div>
                     <div className="flex flex-col gap-1">
                         <select
@@ -209,7 +218,7 @@ export function PopupReduzaDividas({ utm_campaign, utm_content, utm_medium, utm_
                         />
                         {title ? (
                             <span>{title}</span>
-                        ) : <span>Calcule a redução da sua dívida</span>}
+                        ) : <span>Solicitar análise de passivos</span>}
                     </button>
                     <div>
                         <input type="hidden" id="utm_term" value={utm_term || 'AQUI'} name="utm_term" placeholder="utm_term" />
